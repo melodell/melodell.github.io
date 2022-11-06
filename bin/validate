@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Style validation script
+#
+# Melina O'Dell
+
+# Stop on errors and print commands
+set -Eeuxo pipefail
+
+# Validate HTML
+html5validator --ignore JAVA_TOOL_OPTIONS --root .
