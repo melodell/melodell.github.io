@@ -2,6 +2,8 @@
 #
 # Melina O'Dell
 
+*.zip
+
 # Python
 *.pyc
 __pycache__/
