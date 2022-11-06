@@ -1,0 +1,47 @@
+#!/bin/bash
+#
+# melodell.github.io run script
+#
+# Melina O'Dell
+#
+# Credit to EECS485 Shell Scripting
+
+
+# Stop on errors
+set -Eeuo pipefail
+
+# Sanity check command line options
+usage() {
+  echo "Usage: $0 (build|run|reset)"
+}
+
+if [ $# -ne 1 ]; then
+  usage
+  exit 1
+fi
+
+case $1 in
+    "build")
+        set -x
+        # Build FUI
+        cd semantic/
+        npx gulp build
+        ;;
+    
+    "run")
+        set -x
+        # Serve on localhost:8000
+        python3 -m http.server 8000
+        ;;
+
+    "reset")
+        set -x
+        $0 build
+        cd ..
+        $0 run
+        ;;
+    *)
+        usage
+        exit 1
+        ;;
+esac
