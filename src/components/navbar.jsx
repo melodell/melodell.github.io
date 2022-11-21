@@ -2,7 +2,7 @@ import * as React from "react"
 
 const Navbar = () => (
     <div className="ui inverted segment">
-        <div className="ui inverted fixed large menu" style={{borderBottom: "1px solid rgba(255,255,255,.08)"}}>
+        <div className="ui inverted fixed huge menu" style={{borderBottom: "1px solid rgba(255,255,255,.08)"}}>
             <div className="borderless item"
                     data-tooltip="Switch to light mode" 
                     data-position="bottom left"

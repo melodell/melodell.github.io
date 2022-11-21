@@ -4,6 +4,7 @@ import { SEO } from "../components/seo"
 import Navbar from "../components/navbar"
 
 const pageStyles = {
+  background: "#1b1c1d",
   padding: "20px 10% 0 10%",
   height: "100vh",
   borderRadius: "0"
