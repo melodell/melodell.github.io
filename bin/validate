@@ -8,4 +8,4 @@
 set -Eeuxo pipefail
 
 # Validate HTML
-html5validator --ignore JAVA_TOOL_OPTIONS --root .
+html5validator --ignore JAVA_TOOL_OPTIONS --root docs/
