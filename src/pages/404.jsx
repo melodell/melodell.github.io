@@ -12,7 +12,6 @@ const headingStyles = {
   marginBottom: 64,
   fontSize: "2em"
 }
-
 const paragraphStyles = {
   marginBottom: 48,
   fontSize: "1.2em"
@@ -32,7 +31,7 @@ const NotFoundPage = () => {
   )
 }
 
-export default NotFoundPage
+export default NotFoundPage;
 
 export const Head = () => (
   <SEO title="Page Not Found" />

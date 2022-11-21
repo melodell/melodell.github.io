@@ -9,7 +9,7 @@ const PostsPage = () => {
   )
 }
 
-export default PostsPage
+export default PostsPage;
 
 export const Head = () => (
   <SEO />
