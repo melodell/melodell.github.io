@@ -8,6 +8,7 @@ Serve locally at `localhost:8000`:
 
 ``` console
 $ ./bin/run
+cd docs/
 python3 -m http.server 8000
 ```
 
@@ -15,6 +16,6 @@ Validate static HTML:
 
 ``` console
 $ ./bin/validate
-html5validator --ignore JAVA_TOOL_OPTIONS --root .
+html5validator --ignore JAVA_TOOL_OPTIONS --root docs/
 ```
 
