@@ -1,14 +1,16 @@
 import * as React from "react"
+import { SEO } from "../components/seo"
 
 const PostsPage = () => {
   return (
     <main>
-      <h1>Welcome to my Gatsby site!</h1>
-      <p>I'm making this by following the Gatsby Tutorial.</p>
+      <h1>Coming Soon</h1>
     </main>
   )
 }
 
 export default PostsPage
 
-export const Head = () => <title>Posts</title>
+export const Head = () => (
+  <SEO />
+)
