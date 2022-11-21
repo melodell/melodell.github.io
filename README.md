@@ -9,7 +9,7 @@ Local development on `source` branch
 
 Serve on `localhost:8000` with:
 ``` console
-$ gatsby develop
+$ npx gatsby develop
 ```
 
 ### Deploy
