@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `melodell.github.io`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://melodell.github.io`,
   },
   plugins: [],
 }

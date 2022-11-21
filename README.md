@@ -1,6 +1,8 @@
 # melodell.github.io
 Melina O'Dell's Personal Website
 
+Made with [Gatsby](https://www.gatsbyjs.com/).
+
 Source code lives on the `source` branch. \
 GitHub Pages hosts from the `main` branch.
 
