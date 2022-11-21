@@ -3,8 +3,16 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `melodell.github.io`,
+    title: `Melina O'Dell`,
+    description: `Melina O'Dell`,
     siteUrl: `https://melodell.github.io`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/icon.png`,
+      },
+    }
+  ],
 }

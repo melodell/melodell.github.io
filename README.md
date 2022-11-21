@@ -14,6 +14,11 @@ Serve on `localhost:8000` with:
 $ npx gatsby develop
 ```
 
+Clear cache with:
+```console
+$ npx gatsby clean
+```
+
 ### Deploy
 Deploy `public/` with GitHub Pages on `main` after making changes:
 
