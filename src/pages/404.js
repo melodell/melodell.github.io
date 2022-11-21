@@ -8,8 +8,7 @@ const pageStyles = {
 }
 const headingStyles = {
   marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
+  marginBottom: 64
 }
 
 const paragraphStyles = {
@@ -26,19 +25,12 @@ const codeStyles = {
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
+      <h1 style={headingStyles}>Whoops! That's a 404.</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+        Sorry! This page doesn't exist.
         <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/">Go home.</Link>
       </p>
     </main>
   )
@@ -46,4 +38,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Page Not Found</title>
