@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { Link, useScrollRestoration } from "gatsby"
 import { SEO } from "../components/seo"
 import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 
 const pageStyles = {
-  // background: "#1b1c1d",
   padding: "60px 10% 0 10%",
   height: "100vh",
   borderRadius: "0"
@@ -23,6 +23,8 @@ const IndexPage = () => {
       <h1>Melina O'Dell</h1>
       {/* <Link to="/posts">Posts</Link> */}
       <p>Makin' websitez</p>
+      <div className="ui divider"></div>
+      <Footer darkMode={darkMode}/>
     </main>
   )
 }
