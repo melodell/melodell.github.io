@@ -28,20 +28,20 @@ const Bio = ({ darkMode }) => (
             <br/>
             <div className="ui center aligned container">
                 <div className="ui small stackable buttons">
-                    <a class="ui envelope button"
+                    <a className="ui envelope button"
                         onClick={() => copyText("melodell@umich.edu")}
                         data-tooltip="Copy melodell@umich.edu to clipboard">
                         <i class="envelope icon"></i>
                         Email
                     </a>
-                    <a class="ui linkedin button"
+                    <a className="ui linkedin button"
                         href="https://www.linkedin.com/in/melina-odell/"
                         target="_blank"
                         data-tooltip="Visit my LinkedIn">
                         <i class="linkedin icon"></i>
                         LinkedIn
                     </a>
-                    <a class="ui github button"
+                    <a className={`ui github ${darkMode ? "inverted" : "black"} button`}
                         href="https://github.com/melodell"
                         target="_blank"
                         data-tooltip="Visit my GitHub">

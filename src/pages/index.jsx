@@ -32,7 +32,7 @@ const IndexPage = () => {
   return (
     <main className={`ui ${darkMode ? "inverted" : ""} segment`} style={pageStyles}>
       <Navbar darkMode={darkMode} modeChangeHandler={changeMode} resumeLink={resumeData.file.publicURL}/>
-      <Bio/>
+      <Bio darkMode={darkMode}/>
       <div className="ui divider"></div>
       <Activities darkMode={darkMode}/>
       <div className="ui divider"></div>
