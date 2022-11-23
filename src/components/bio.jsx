@@ -5,6 +5,10 @@ const bioStyles = {
     padding: '10px 0 10px 0'
 }
 
+const fontStyle = {fontSize: '16px'}
+
+const copyText = (text) => {navigator.clipboard.writeText(text);}
+
 const Bio = ({ darkMode }) => (
     <div className={`ui ${darkMode ? "inverted" : ""} two column stackable grid container`} style={bioStyles}>
         <div className="center aligned column">
@@ -17,11 +21,34 @@ const Bio = ({ darkMode }) => (
         <div className="column">
             <h1>Melina O'Dell</h1>
             {/* <p>Makin' websitez</p> */}
-            <div className="ui container">
-                <p>Melina is a senior at the University of Michigan in Ann Arbor, majoring in Computer Science. 
-                    She intends to pursue a Master's degree in Computer Science Engineering through Michigan's SUGS program.
-                </p>
-                <p>She is passionate about full-stack web development, supporting women in STEM, teaching, and perpetual learning.</p>
+            <p style={fontStyle}>Melina is a senior at the University of Michigan in Ann Arbor, majoring in Computer Science. 
+                She intends to pursue a Master's degree in Computer Science Engineering through Michigan's SUGS program.
+            </p>
+            <p style={fontStyle}>She is passionate about full-stack web development, supporting women in STEM, teaching, and perpetual learning.</p>
+            <br/>
+            <div className="ui center aligned container">
+                <div className="ui small stackable buttons">
+                    <a class="ui envelope button"
+                        onClick={() => copyText("melodell@umich.edu")}
+                        data-tooltip="Copy melodell@umich.edu to clipboard">
+                        <i class="envelope icon"></i>
+                        Email
+                    </a>
+                    <a class="ui linkedin button"
+                        href="https://www.linkedin.com/in/melina-odell/"
+                        target="_blank"
+                        data-tooltip="Visit my LinkedIn">
+                        <i class="linkedin icon"></i>
+                        LinkedIn
+                    </a>
+                    <a class="ui github button"
+                        href="https://github.com/melodell"
+                        target="_blank"
+                        data-tooltip="Visit my GitHub">
+                        <i class="github icon"></i>
+                        GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </div>
