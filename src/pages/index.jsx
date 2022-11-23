@@ -9,7 +9,6 @@ import Footer from "../components/footer"
 
 const pageStyles = {
   padding: "60px 10% 0 10%",
-  height: "100vh",
   borderRadius: "0"
 }
 
