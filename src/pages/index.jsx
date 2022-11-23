@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link, useScrollRestoration } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import { SEO } from "../components/seo"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
@@ -17,14 +17,24 @@ const IndexPage = () => {
     setMode(newMode);
   }
 
+  // Resume file must start with "Resume"
+  const resumeData = useStaticQuery(graphql`
+    {
+      file(extension: {eq: "pdf"}, name: {glob: "Resume*"}) {
+          name
+          publicURL  
+      }
+    }
+  `)
+
   return (
     <main className={`ui ${darkMode ? "inverted" : ""} segment`} style={pageStyles}>
-      <Navbar darkMode={darkMode} modeChangeHandler={changeMode}/>
+      <Navbar darkMode={darkMode} modeChangeHandler={changeMode} resumeLink={resumeData.file.publicURL}/>
       <h1>Melina O'Dell</h1>
       {/* <Link to="/posts">Posts</Link> */}
       <p>Makin' websitez</p>
       <div className="ui divider"></div>
-      <Footer darkMode={darkMode}/>
+      <Footer darkMode={darkMode} resumeLink={resumeData.file.publicURL}/>
     </main>
   )
 }

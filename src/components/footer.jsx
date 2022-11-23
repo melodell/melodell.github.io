@@ -12,7 +12,7 @@ const pad = {
     padding: '1px'
 }
 
-const Footer = ({ darkMode }) => (
+const Footer = ({ darkMode, resumeLink }) => (
     <footer id="contact" className={`ui ${darkMode ? "inverted" : ""} footer container`} style={footerStyles}>
         <h2>Contact Me</h2>
         <div className={`ui ${darkMode ? "inverted" : ""} two column  stackable grid`} style={{padding: '10px 0 30px 0'}}>
@@ -41,7 +41,7 @@ const Footer = ({ darkMode }) => (
                 </div>
                 <div style={pad}>
                     <i className="file alternate icon"></i>
-                    <a href="src/assets/Resume_Melina_ODell.pdf" download>Resume</a>
+                    <a href={resumeLink} target="_blank">Resume</a>
                 </div>
             </div>
         </div>

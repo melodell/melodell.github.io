@@ -1,6 +1,6 @@
 import React from "react"
 
-const Navbar = ({ darkMode, modeChangeHandler }) => (
+const Navbar = ({ darkMode, modeChangeHandler, resumeLink }) => (
     <div className={`ui ${darkMode ? "inverted" : ""} fixed huge menu`} style={{borderBottom: "1px solid rgba(255,255,255,.08)"}}>
         <a className="borderless item"
                 data-tooltip={`Switch to ${darkMode ? "light" : "dark"} mode`} 
@@ -10,7 +10,7 @@ const Navbar = ({ darkMode, modeChangeHandler }) => (
             <i className={`${darkMode ? "moon" : "sun"} icon`}></i>
         </a>
         <div className="right menu">
-            <a href="src/assets/Resume_Melina_ODell.pdf" download 
+            <a href={resumeLink} target="_blank" 
                 className="item" 
                 data-tooltip="Download my resume" 
                 data-position="bottom right"
