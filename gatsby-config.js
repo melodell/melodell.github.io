@@ -8,6 +8,8 @@ module.exports = {
     siteUrl: `https://melodell.github.io`,
   },
   plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -20,6 +22,6 @@ module.exports = {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
       },
-    }
+    },
   ],
 }

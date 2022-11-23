@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { SEO } from "../components/seo"
 import Navbar from "../components/navbar"
+import Bio from "../components/bio"
 import Footer from "../components/footer"
 
 const pageStyles = {
@@ -30,9 +31,8 @@ const IndexPage = () => {
   return (
     <main className={`ui ${darkMode ? "inverted" : ""} segment`} style={pageStyles}>
       <Navbar darkMode={darkMode} modeChangeHandler={changeMode} resumeLink={resumeData.file.publicURL}/>
-      <h1>Melina O'Dell</h1>
+      <Bio/>
       {/* <Link to="/posts">Posts</Link> */}
-      <p>Makin' websitez</p>
       <div className="ui divider"></div>
       <Footer darkMode={darkMode} resumeLink={resumeData.file.publicURL}/>
     </main>
