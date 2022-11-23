@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { SEO } from "../components/seo"
 import Navbar from "../components/navbar"
 import Bio from "../components/bio"
+import Activities from "../components/activities"
+import Projects from "../components/projects"
 import Footer from "../components/footer"
 
 const pageStyles = {
@@ -32,7 +34,10 @@ const IndexPage = () => {
     <main className={`ui ${darkMode ? "inverted" : ""} segment`} style={pageStyles}>
       <Navbar darkMode={darkMode} modeChangeHandler={changeMode} resumeLink={resumeData.file.publicURL}/>
       <Bio/>
-      {/* <Link to="/posts">Posts</Link> */}
+      <div className="ui divider"></div>
+      <Activities darkMode={darkMode}/>
+      <div className="ui divider"></div>
+      <Projects darkMode={darkMode}/>
       <div className="ui divider"></div>
       <Footer darkMode={darkMode} resumeLink={resumeData.file.publicURL}/>
     </main>
