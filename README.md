@@ -6,6 +6,18 @@ Made with [Gatsby](https://www.gatsbyjs.com/).
 Source code lives on the `source` branch. \
 GitHub Pages hosts from the `main` branch.
 
+### What?
+TBD
+### Why?
+TBD
+### How?
+- Languages: React, HTML, Markdown, a little CSS.
+- [Gatsby](https://www.gatsbyjs.com/) for scalable static pages. Lighter weight than React with all the React magic.
+- [Fomantic UI](https://fomantic-ui.com/) for clean, easy styling.
+- GitHub Pages for easy deployment.
+
+
+## Workflow
 ### Develop
 Local development on `source` branch
 
