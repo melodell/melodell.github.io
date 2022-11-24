@@ -31,7 +31,6 @@ const Footer = ({ darkMode, resumeLink }) => (
                         <span> (989) 860-2581</span>
                     </div>
                 </div>
-                
             </div>
             <div className="column">
                 <div className="ui list">
