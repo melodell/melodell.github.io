@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import { SEO } from "../components/seo"
+
+import 'fomantic-ui-css/semantic.min.css';
+
+import { Seo } from "../components/seo"
 
 const pageStyles = {
   padding: "100px",
@@ -34,5 +37,5 @@ const NotFoundPage = () => {
 export default NotFoundPage;
 
 export const Head = () => (
-  <SEO title="Page Not Found" />
+  <Seo title="Page Not Found" />
 )

@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { SEO } from "../components/seo"
+
+import 'fomantic-ui-css/semantic.min.css';
+
+import { Seo } from "../components/seo"
 import Navbar from "../components/navbar"
 import Bio from "../components/bio"
 import Activities from "../components/activities"
@@ -48,5 +51,5 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head = () => (
-  <SEO />
+  <Seo />
 )
