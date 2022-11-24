@@ -41,7 +41,8 @@ const Bio = ({ darkMode }) => (
                         <i className="linkedin icon"></i>
                         LinkedIn
                     </a>
-                    <a className={`ui github ${darkMode ? "inverted" : "black"} button`}
+                    <a className={`ui github black button`}
+                        style={{border: `1px solid ${darkMode ? "#FFFFFF" : "#1b1c1d"}`, borderRadius: "auto"}}
                         href="https://github.com/melodell"
                         target="_blank"
                         data-tooltip="Visit my GitHub">

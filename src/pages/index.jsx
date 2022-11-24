@@ -12,7 +12,8 @@ import Footer from "../components/footer"
 
 const pageStyles = {
   padding: "60px 10% 0 10%",
-  borderRadius: "0",
+  border: "0px",
+  borderRadius: "0px"
 }
 
 const IndexPage = () => {

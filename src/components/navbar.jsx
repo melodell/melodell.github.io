@@ -1,13 +1,18 @@
 import React from "react"
 
+const menuStyle = {
+    border: "0px",
+    borderBottom: "1px solid rgba(255,255,255,.08)"
+}
+
 const Navbar = ({ darkMode, modeChangeHandler, resumeLink }) => (
-    <div className={`ui ${darkMode ? "inverted" : ""} fixed huge menu`} style={{borderBottom: "1px solid rgba(255,255,255,.08)"}}>
+    <div className={`ui ${darkMode ? "inverted" : ""} fixed huge menu`} style={menuStyle}>
         <a className="borderless item"
                 data-tooltip={`Switch to ${darkMode ? "light" : "dark"} mode`} 
                 data-position="bottom left"
                 data-variation="basic"
                 onClick={modeChangeHandler}>
-            <i className={`${darkMode ? "moon" : "sun"} icon`}></i>
+            <i className={`fitted ${darkMode ? "moon" : "sun"} icon`}></i>
         </a>
         <div className="right menu">
             <a href={resumeLink} target="_blank" 
