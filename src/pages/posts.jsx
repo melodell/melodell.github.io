@@ -1,5 +1,8 @@
 import React from "react"
-import { SEO } from "../components/seo"
+
+import 'fomantic-ui-css/semantic.min.css';
+
+import { Seo } from "../components/seo"
 
 const PostsPage = () => {
   return (
@@ -12,5 +15,5 @@ const PostsPage = () => {
 export default PostsPage;
 
 export const Head = () => (
-  <SEO />
+  <Seo />
 )
