@@ -9,7 +9,7 @@ import Footer from "../components/footer"
 
 const pageStyles = {
   padding: "60px 10% 0 10%",
-  borderRadius: "0"
+  borderRadius: "0",
 }
 
 const IndexPage = () => {
@@ -31,14 +31,16 @@ const IndexPage = () => {
 
   return (
     <main className={`ui ${darkMode ? "inverted" : ""} segment`} style={pageStyles}>
-      <Navbar darkMode={darkMode} modeChangeHandler={changeMode} resumeLink={resumeData.file.publicURL}/>
-      <Bio darkMode={darkMode}/>
-      <div className="ui divider"></div>
-      <Activities darkMode={darkMode}/>
-      <div className="ui divider"></div>
-      <Projects darkMode={darkMode}/>
-      <div className="ui divider"></div>
-      <Footer darkMode={darkMode} resumeLink={resumeData.file.publicURL}/>
+      <div className="ui text container" style={{maxWidth: "920px"}}>
+        <Navbar darkMode={darkMode} modeChangeHandler={changeMode} resumeLink={resumeData.file.publicURL}/>
+        <Bio darkMode={darkMode}/>
+        <div className="ui divider"></div>
+        <Activities darkMode={darkMode}/>
+        <div className="ui divider"></div>
+        <Projects darkMode={darkMode}/>
+        <div className="ui divider"></div>
+        <Footer darkMode={darkMode} resumeLink={resumeData.file.publicURL}/>
+      </div>
     </main>
   )
 }

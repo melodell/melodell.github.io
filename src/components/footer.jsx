@@ -1,7 +1,7 @@
 import React from "react"
 
 const footerStyles = {
-    width: '70%',
+    width: '85%',
     margin: '0 auto',
     paddingBottom: '20px',
     textAlign: 'Center',
@@ -15,7 +15,7 @@ const pad = {
 const Footer = ({ darkMode, resumeLink }) => (
     <footer id="contact" className={`ui ${darkMode ? "inverted" : ""} footer container`} style={footerStyles}>
         <h2>Contact Me</h2>
-        <div className={`ui ${darkMode ? "inverted" : ""} two column  stackable grid`} style={{padding: '10px 0 30px 0'}}>
+        <div className={`ui ${darkMode ? "inverted" : ""} two column stackable grid`} style={{padding: '10px 0 30px 0'}}>
             <div className="column">
                 <div className="ui list">
                     <div style={pad}>

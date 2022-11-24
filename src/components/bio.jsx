@@ -31,21 +31,21 @@ const Bio = ({ darkMode }) => (
                     <a className="ui envelope button"
                         onClick={() => copyText("melodell@umich.edu")}
                         data-tooltip="Copy melodell@umich.edu to clipboard">
-                        <i class="envelope icon"></i>
+                        <i className="envelope icon"></i>
                         Email
                     </a>
                     <a className="ui linkedin button"
                         href="https://www.linkedin.com/in/melina-odell/"
                         target="_blank"
                         data-tooltip="Visit my LinkedIn">
-                        <i class="linkedin icon"></i>
+                        <i className="linkedin icon"></i>
                         LinkedIn
                     </a>
                     <a className={`ui github ${darkMode ? "inverted" : "black"} button`}
                         href="https://github.com/melodell"
                         target="_blank"
                         data-tooltip="Visit my GitHub">
-                        <i class="github icon"></i>
+                        <i className="github icon"></i>
                         GitHub
                     </a>
                 </div>
