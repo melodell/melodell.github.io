@@ -1,21 +1,21 @@
 import React from "react"
 
 const footerStyles = {
-    width: '85%',
-    margin: '0 auto',
-    paddingBottom: '20px',
-    textAlign: 'Center',
-    fontSize: '1.1em'
+    width: "85%",
+    margin: "0 auto",
+    paddingBottom: "20px",
+    textAlign: "center",
+    fontSize: "1.1em"
 }
 
 const pad = {
-    padding: '1px'
+    padding: "1px"
 }
 
 const Footer = ({ darkMode, resumeLink }) => (
     <footer id="contact" className={`ui ${darkMode ? "inverted" : ""} footer container`} style={footerStyles}>
         <h2>Contact Me</h2>
-        <div className={`ui ${darkMode ? "inverted" : ""} two column stackable grid`} style={{padding: '10px 0 30px 0'}}>
+        <div className={`ui ${darkMode ? "inverted" : ""} two column stackable grid`} style={{padding: "10px 0 30px 0"}}>
             <div className="column">
                 <div className="ui list">
                     <div style={pad}>
@@ -36,7 +36,7 @@ const Footer = ({ darkMode, resumeLink }) => (
                 <div className="ui list">
                     <div style={pad}>
                         <i className="linkedin icon"></i> 
-                        <a href="https://www.linkedin.com/in/melina-odell/" target="_blank"> Melina O'Dell on LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/melina-odell/" target="_blank"> Melina O"Dell on LinkedIn</a>
                     </div>
                     <div style={pad}>
                         <i className="github icon"></i>

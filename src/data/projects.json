@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Twitter Countdown Bot",
+        "description": "FIXME",
+        "tech": [
+            "FIXME",
+            "FIXME",
+            "FIXME"
+        ],
+        "url": "https://github.com/melodell/movie-countdown",
+        "label": "3000+ views/day",
+        "labelColor": "blue"
+    },
+    {
+        "title": "Personal Website",
+        "description": "FIXME",
+        "tech": [
+            "FIXME",
+            "FIXME",
+            "FIXME"
+        ],
+        "url": "https://github.com/melodell/melodell.github.io",
+        "label": "You are here!",
+        "labelColor": "red"
+    }
+]
