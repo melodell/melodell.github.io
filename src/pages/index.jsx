@@ -1,5 +1,8 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+
+import 'fomantic-ui-css/semantic.min.css';
+
 import { SEO } from "../components/seo"
 import Navbar from "../components/navbar"
 import Bio from "../components/bio"
