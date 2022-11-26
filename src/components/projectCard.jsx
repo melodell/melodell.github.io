@@ -1,7 +1,7 @@
 import React from "react";
 
 const cardStyles = {
-    padding: "2px",
+    padding: "2px"
 }
 
 const ProjectCard = ({ darkMode, data }) => (
@@ -10,6 +10,9 @@ const ProjectCard = ({ darkMode, data }) => (
             <div className="header">{data.title}</div>
             <div className="description">{data.description}</div>
             <div className={`ui bottom attached ${data.labelColor} label`}>{data.label}</div>
+            <div className={`ui right floating icon label`}>
+                <i className="black github icon"></i>
+            </div>
         </div>
     </a>
 );

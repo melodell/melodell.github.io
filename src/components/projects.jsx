@@ -12,7 +12,7 @@ const projStyles = {
 const Projects = ({ darkMode }) => (
     <div className={`ui ${darkMode ? "inverted" : ""} container`} style={projStyles}>
         <h2>Projects</h2>
-        <div className="ui centered stackable cards" style={{margin: "10px 0 0 0"}}>
+        <div className="ui two centered stackable cards" style={{margin: "10px 0 0 0"}}>
             {data.map((p) => (
                 <ProjectCard key={data.title} darkMode={darkMode} data={p}/>
             ))}
