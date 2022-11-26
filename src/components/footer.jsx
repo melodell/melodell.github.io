@@ -36,7 +36,7 @@ const Footer = ({ darkMode, resumeLink }) => (
                 <div className="ui list">
                     <div style={pad}>
                         <i className="linkedin icon"></i> 
-                        <a href="https://www.linkedin.com/in/melina-odell/" target="_blank"> Melina O"Dell on LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/melina-odell/" target="_blank"> Melina O'Dell on LinkedIn</a>
                     </div>
                     <div style={pad}>
                         <i className="github icon"></i>
