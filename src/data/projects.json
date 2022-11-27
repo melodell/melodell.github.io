@@ -4,6 +4,7 @@
         "description": "",
         "tech": [
             "Python + Tweepy",
+            "Twitter API",
             "Heroku"
         ],
         "url": "https://github.com/melodell/movie-countdown",
