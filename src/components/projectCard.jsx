@@ -14,7 +14,7 @@ const ProjectCard = ({ darkMode, data }) => (
                 <i className="black github icon"></i>
             </div>
         </div>
-        <div className="extra content" style={{paddingBottom: "45px"}}>
+        <div className="extra content" style={{paddingBottom: "45px", fontSize: "90%"}}>
             {data.tech.map((t, i) => (
                 <span>{t}{i !== data.tech.length - 1 ? " | " : ""}</span>
             ))}

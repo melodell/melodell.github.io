@@ -13,7 +13,8 @@ import Footer from "../components/footer"
 const pageStyles = {
   padding: "60px 10% 0 10%",
   border: "0px",
-  borderRadius: "0px"
+  borderRadius: "0px",
+  paddingBottom: "20vh" // temp
 }
 
 const IndexPage = () => {
@@ -38,8 +39,8 @@ const IndexPage = () => {
       <div className="ui text container" style={{maxWidth: "920px"}}>
         <Navbar darkMode={darkMode} modeChangeHandler={changeMode} resumeLink={resumeData.file.publicURL}/>
         <Bio darkMode={darkMode}/>
-        <div className="ui divider"></div>
-        <Activities darkMode={darkMode}/>
+        {/* <div className="ui divider"></div>
+        <Activities darkMode={darkMode}/> */}
         <div className="ui divider"></div>
         <Projects darkMode={darkMode}/>
         <div className="ui divider"></div>

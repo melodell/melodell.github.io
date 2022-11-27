@@ -1,11 +1,10 @@
 [
     {
         "title": "Twitter Countdown Bot",
-        "description": "FIXME",
+        "description": "",
         "tech": [
-            "FIXME",
-            "FIXME",
-            "FIXME"
+            "Python + Tweepy",
+            "Heroku"
         ],
         "url": "https://github.com/melodell/movie-countdown",
         "label": "3000+ views/day",
@@ -13,11 +12,9 @@
     },
     {
         "title": "Personal Website",
-        "description": "FIXME",
+        "description": "",
         "tech": [
-            "FIXME",
-            "FIXME",
-            "FIXME"
+            "React", "Gatsby", "HTML/CSS", "GraphQL", "GH Pages"
         ],
         "url": "https://github.com/melodell/melodell.github.io",
         "label": "You are here!",
