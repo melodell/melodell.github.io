@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Activities = ({ darkMode }) => (
     <div className={`ui ${darkMode ? "inverted" : ""} container`}>
@@ -7,3 +8,7 @@ const Activities = ({ darkMode }) => (
 );
 
 export default Activities;
+
+Activities.propTypes = {
+    darkMode: PropTypes.bool.isRequired
+}

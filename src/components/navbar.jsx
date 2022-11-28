@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import PropTypes from "prop-types";
 
 const menuStyle = {
     border: "0px",
@@ -34,3 +35,9 @@ const Navbar = ({ darkMode, modeChangeHandler, resumeLink }) => (
 )
 
 export default Navbar;
+
+Navbar.propTypes = {
+    darkMode: PropTypes.bool.isRequired,
+    modeChangeHandler: PropTypes.func.isRequired,
+    resumeLink: PropTypes.string.isRequired
+}

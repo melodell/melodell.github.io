@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ProjectCard from "./projectCard";
-import data from "../data/projects.json"
+import data from "../data/projects.json";
 
 const projStyles = {
     padding: "0 0 10px 0",
@@ -21,3 +22,7 @@ const Projects = ({ darkMode }) => (
 );
 
 export default Projects;
+
+Projects.propTypes = {
+    darkMode: PropTypes.bool.isRequired
+}

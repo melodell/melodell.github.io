@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { StaticImage } from "gatsby-plugin-image";
 
 const bioStyles = {
@@ -56,3 +57,7 @@ const Bio = ({ darkMode }) => (
 );
 
 export default Bio;
+
+Bio.propTypes = {
+    darkMode: PropTypes.bool.isRequired
+}

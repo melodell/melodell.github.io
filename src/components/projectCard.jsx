@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const cardStyles = {
     padding: "2px"
@@ -23,3 +24,8 @@ const ProjectCard = ({ darkMode, data }) => (
 );
 
 export default ProjectCard;
+
+ProjectCard.propTypes = {
+    darkMode: PropTypes.bool.isRequired,
+    data: PropTypes.object.isRequired
+}

@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import PropTypes from "prop-types";
 
 const footerStyles = {
     width: "85%",
@@ -54,3 +55,8 @@ const Footer = ({ darkMode, resumeLink }) => (
 );
 
 export default Footer;
+
+Footer.propTypes = {
+    darkMode: PropTypes.bool.isRequired,
+    resumeLink: PropTypes.string.isRequired
+}
