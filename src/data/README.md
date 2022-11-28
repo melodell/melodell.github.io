@@ -6,7 +6,7 @@
 `tech`: List of technologies used (`array` of `string`) \
 `url`: Link to source code (`string`) \
 `label`: Note for card label (`string`) \
-`labelColor`: Color for card label (`string`) \
+`labelColor`: Color for card label (`string`)
 
 ### Activities (`activities.json`)
 TBD
