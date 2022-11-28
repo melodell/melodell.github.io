@@ -13,7 +13,7 @@
     },
     {
         "title": "Personal Website",
-        "description": "An autobiographical static site, generated using Gatsby. Source code written in React. Queries for site data using GraphQL. Hosted on GitHub Pages.",
+        "description": "An autobiographical static site, generated using Gatsby. Source code written in React. Styled with Fomantic UI. Hosted on GitHub Pages.",
         "tech": [
             "React", "Gatsby", "HTML/CSS", "GraphQL", "GH Pages"
         ],
