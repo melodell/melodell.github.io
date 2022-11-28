@@ -1,19 +1,19 @@
 [
     {
         "title": "Twitter Countdown Bot",
-        "description": "",
+        "description": "A simple Twitter bot to countdown the days to a movie premiere. Uses Tweepy to access the Twitter API. Deployed and scheduled with Heroku to make daily tweets.",
         "tech": [
             "Python + Tweepy",
             "Twitter API",
             "Heroku"
         ],
         "url": "https://github.com/melodell/movie-countdown",
-        "label": "3000+ views/day",
+        "label": "3000+ views/day + Retweeted by the official movie account!",
         "labelColor": "blue"
     },
     {
         "title": "Personal Website",
-        "description": "",
+        "description": "An autobiographical static site, generated using Gatsby. Source code written in React. Queries for site data using GraphQL. Hosted on GitHub Pages.",
         "tech": [
             "React", "Gatsby", "HTML/CSS", "GraphQL", "GH Pages"
         ],
