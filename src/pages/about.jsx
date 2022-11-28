@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
 import 'fomantic-ui-css/semantic.min.css';
 
-import { Seo } from "../components/seo"
+import { Seo } from "../components/seo";
 
 const AboutPage = () => {
   return (

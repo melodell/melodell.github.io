@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
 import 'fomantic-ui-css/semantic.min.css';
 
-import { Seo } from "../components/seo"
+import { Seo } from "../components/seo";
 
 const pageStyles = {
   padding: "100px",

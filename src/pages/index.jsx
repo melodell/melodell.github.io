@@ -1,14 +1,14 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import 'fomantic-ui-css/semantic.min.css';
 
-import { Seo } from "../components/seo"
-import Navbar from "../components/navbar"
-import Bio from "../components/bio"
-import Activities from "../components/activities"
-import Projects from "../components/projects"
-import Footer from "../components/footer"
+import { Seo } from "../components/seo";
+import Navbar from "../components/navbar";
+import Bio from "../components/bio";
+import Activities from "../components/activities";
+import Projects from "../components/projects";
+import Footer from "../components/footer";
 
 const pageStyles = {
   padding: "60px 10% 0 10%",
