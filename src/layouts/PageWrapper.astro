@@ -3,9 +3,13 @@ interface Props {
     title: string;
     description: string;
     keywords: Array<string>;
+    author: string;
+    useFomantic: boolean;
 }
 
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, author, useFomantic } = Astro.props;
+
+import "../styles/global.scss";
 ---
 
 <!doctype html>
@@ -15,6 +19,7 @@ const { title, description, keywords } = Astro.props;
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(", ")} />
+        <meta name="author" content={author} />
         <!-- Icon -->
         <link
             rel="apple-touch-icon"
@@ -38,37 +43,22 @@ const { title, description, keywords } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        {
+            useFomantic && (
+                // Fomantic UI
+                <>
+                    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" />
+                    <link
+                        rel="stylesheet"
+                        type="text/css"
+                        href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css"
+                    />
+                    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js" />
+                </>
+            )
+        }
     </head>
     <body>
         <slot />
     </body>
 </html>
-<style is:global>
-    :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-            45deg,
-            rgb(var(--accent)),
-            rgb(var(--accent-light)) 30%,
-            white 60%
-        );
-    }
-    html {
-        font-family: system-ui, sans-serif;
-        background: #13151a;
-        background-size: 224px;
-    }
-    code {
-        font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
-    }
-</style>
