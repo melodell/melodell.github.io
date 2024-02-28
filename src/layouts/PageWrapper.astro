@@ -9,6 +9,8 @@ interface Props {
 
 const { title, description, keywords, author, useFomantic } = Astro.props;
 
+const base = "/melinaodell.com";
+
 import "../styles/global.scss";
 ---
 
@@ -24,21 +26,21 @@ import "../styles/global.scss";
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/apple-touch-icon.png"
+            href=`${base}/apple-touch-icon.png`
         />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/favicon-32x32.png"
+            href=`${base}/favicon-32x32.png`
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/favicon-16x16.png"
+            href=`${base}/favicon-16x16.png`
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href=`${base}/site.webmanifest` />
         <!-- Standard Meta -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
