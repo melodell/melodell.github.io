@@ -1,5 +1,6 @@
 ---
 import ThemeButton from "../ThemeButton.astro";
+import sections from "../../data/sections.json";
 ---
 
 <div id="sidebar" class="ui left vertical thin sidebar menu">
@@ -18,19 +19,24 @@ import ThemeButton from "../ThemeButton.astro";
     <!-- Anchor links -->
     <div class="item center-items">
         <div class="menu">
-            <span class="item anchor" data-href="#experience">Experience</span>
-            <span class="item anchor" data-href="#projects">Projects</span>
-            <span class="item anchor" data-href="#papers">Papers</span>
+            {
+                sections["sections"].map((s) => (
+                    <span class="item anchor" data-href={`${s.href}`}>
+                        {s.name}
+                    </span>
+                ))
+            }
         </div>
     </div>
 
-    <!-- Resume Download -->
     <div class="item center-items">
         <div class="menu">
+            <!-- Resume Download -->
             <a class="item">
                 Resume
                 <i class="external alternate icon"></i>
             </a>
+            <!-- Contact info -->
             <span class="item anchor" data-href="#contact">Contact</span>
         </div>
     </div>
@@ -71,17 +77,17 @@ import ThemeButton from "../ThemeButton.astro";
 
 <script>
     // @ts-nocheck
-
     // https://fomantic-ui.com/modules/sidebar.html#/usage
     const smallScreenSize = 728;
     const isSmallScreen = () => window.innerWidth < smallScreenSize;
     const sidebar = $("#sidebar");
     const sidebarToggle = document.getElementById("sidebar-toggle");
+    const pusher = document.querySelector(".pusher");
 
     const showSidebar = () => {
         sidebar.sidebar("show");
-        sidebarToggle?.classList.add(...["flipped", "sidebar-open"]);
-        sidebarToggle?.classList.remove("sidebar-closed");
+        sidebarToggle.classList.add(...["flipped", "sidebar-open"]);
+        sidebarToggle.classList.remove("sidebar-closed");
     };
 
     const hideSidebar = () => {
@@ -99,15 +105,24 @@ import ThemeButton from "../ThemeButton.astro";
             exclusive: false,
             closable: false,
         });
-        // sidebar.sidebar("attach events", "#sidebar-toggle");
+
+        // Show/hide sidebar on toggle arrow click
         sidebarToggle.addEventListener("click", () => {
             sidebar.sidebar("is hidden") ? showSidebar() : hideSidebar();
+        });
+
+        // Hide sidebar when clicking elsewhere on the page
+        pusher.addEventListener("click", () => {
+            if (sidebar.sidebar("is visible")) {
+                hideSidebar();
+            }
         });
 
         // Detect swipe events to show/hide sidebar
         document.addEventListener("swiped-left", () => hideSidebar());
         document.addEventListener("swiped-right", () => showSidebar());
     } else {
+        // Always show sidebar on large screens and hide toggle arrow
         sidebar.addClass("visible");
         sidebarToggle.hidden = true;
     }

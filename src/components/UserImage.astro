@@ -21,12 +21,27 @@ const images = [image1, image2, image3, image4];
                 src={image}
                 alt="Melina O'Dell"
                 loading="eager"
-                height={200}
-                width={200}
+                height={500}
+                width={500}
             />
         ))
     }
 </div>
+
+<script>
+    const imageWrapper = document.querySelector(".image-wrapper");
+    const images = document.getElementsByClassName("user-image");
+    // Show the first image on load
+    images[0].classList.add("active");
+
+    // Cycle through the images on click by changing z-index
+    let selected = 0;
+    imageWrapper?.addEventListener("click", () => {
+        images[selected].classList.remove("active");
+        selected = (selected + 1) % images.length;
+        images[selected].classList.add("active");
+    });
+</script>
 
 <style>
     .image-wrapper {
@@ -43,18 +58,3 @@ const images = [image1, image2, image3, image4];
         z-index: 1;
     }
 </style>
-
-<script>
-    const imageWrapper = document.querySelector(".image-wrapper");
-    const images = document.getElementsByClassName("user-image");
-    // Show the first image on load
-    images[0].classList.add("active");
-
-    // Cycle through the images on click by changing z-index
-    let selected = 0;
-    imageWrapper?.addEventListener("click", () => {
-        images[selected].classList.remove("active");
-        selected = (selected + 1) % images.length;
-        images[selected].classList.add("active");
-    });
-</script>
