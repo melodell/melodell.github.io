@@ -1,0 +1,60 @@
+<div id="sidebar-toggle" class="caret sidebar-closed"></div>
+
+<style>
+    :root {
+        --caret-height: 12px;
+        --caret-width: 7px;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-3px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    #sidebar-toggle {
+        position: fixed;
+        height: 100%;
+        top: 45vh;
+        cursor: pointer;
+
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .sidebar-closed {
+        left: 15px;
+        transition: left ease 0.5s;
+    }
+
+    .sidebar-open {
+        left: 165px;
+        transition: left ease 0.48s;
+    }
+
+    .caret {
+        position: relative;
+    }
+
+    .caret:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        border-left: var(--caret-width) solid var(--text-color);
+        border-top: var(--caret-width) solid transparent;
+        border-bottom: var(--caret-width) solid transparent;
+    }
+
+    .caret.flipped:after {
+        border-left: 0;
+        border-right: var(--caret-width) solid var(--text-color);
+    }
+</style>

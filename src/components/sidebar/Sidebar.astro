@@ -71,9 +71,24 @@ import ThemeButton from "../ThemeButton.astro";
 
 <script>
     // @ts-nocheck
+
     // https://fomantic-ui.com/modules/sidebar.html#/usage
-    const isSmallScreen = () => window.innerWidth < 768;
+    const smallScreenSize = 728;
+    const isSmallScreen = () => window.innerWidth < smallScreenSize;
     const sidebar = $("#sidebar");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+
+    const showSidebar = () => {
+        sidebar.sidebar("show");
+        sidebarToggle?.classList.add(...["flipped", "sidebar-open"]);
+        sidebarToggle?.classList.remove("sidebar-closed");
+    };
+
+    const hideSidebar = () => {
+        sidebar.sidebar("hide");
+        sidebarToggle.classList.remove(...["flipped", "sidebar-open"]);
+        sidebarToggle.classList.add("sidebar-closed");
+    };
 
     // Make sidebar toggleable on small screens and default to hidden
     if (isSmallScreen()) {
@@ -84,14 +99,18 @@ import ThemeButton from "../ThemeButton.astro";
             exclusive: false,
             closable: false,
         });
-        sidebar.sidebar("attach events", "#sidebar-toggle");
+        // sidebar.sidebar("attach events", "#sidebar-toggle");
+        sidebarToggle.addEventListener("click", () => {
+            sidebar.sidebar("is hidden") ? showSidebar() : hideSidebar();
+        });
+
+        // Detect swipe events to show/hide sidebar
+        document.addEventListener("swiped-left", () => hideSidebar());
+        document.addEventListener("swiped-right", () => showSidebar());
     } else {
         sidebar.addClass("visible");
+        sidebarToggle.hidden = true;
     }
-
-    // Detect swipe events to show/hide sidebar
-    document.addEventListener("swiped-left", () => sidebar.sidebar("hide"));
-    document.addEventListener("swiped-right", () => sidebar.sidebar("show"));
 </script>
 
 <style>

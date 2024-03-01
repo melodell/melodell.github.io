@@ -7,7 +7,8 @@ interface Props {
     useFomantic: boolean;
 }
 
-const { title, description, keywords, author, useFomantic } = Astro.props;
+const { title, description, keywords, author, useFomantic }: Props =
+    Astro.props;
 
 const base = "/melinaodell.com";
 // const base = "";
@@ -68,3 +69,9 @@ import "../styles/global.scss";
         </div>
     </body>
 </html>
+
+<style>
+    .pusher {
+        background: var(--background-color) !important;
+    }
+</style>
