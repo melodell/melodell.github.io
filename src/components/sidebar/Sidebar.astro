@@ -1,8 +1,8 @@
 ---
-import ThemeButton from "./ThemeButton.astro";
+import ThemeButton from "../ThemeButton.astro";
 ---
 
-<div id="sidebar" class="ui visible left vertical thin sidebar menu">
+<div id="sidebar" class="ui left vertical thin sidebar menu">
     <!-- Logo -->
     <div class="item center-items">
         <img
@@ -43,6 +43,10 @@ import ThemeButton from "./ThemeButton.astro";
 </div>
 
 <script is:inline>
+    {
+        /* Set active anchor link on click */
+    }
+
     const navlinks = document.querySelectorAll(".anchor");
     const activeAnchor = window.location.hash;
 
@@ -52,17 +56,42 @@ import ThemeButton from "./ThemeButton.astro";
             ? linkEl.classList.add("active")
             : linkEl.classList.remove("active");
 
-        console.log(linkEl);
-
         // Change focus on click
         linkEl.addEventListener("click", (e) => {
-            console.log(e.target.getAttribute("data-href"));
             const navlinks = document.querySelectorAll(".anchor");
             navlinks.forEach((link) => link.classList.remove("active"));
             e.target.classList.add("active");
             window.location.hash = e.target.getAttribute("data-href");
         });
     });
+</script>
+
+<!-- Listen for swipe events -->
+<script src="../../scripts/swiped-events.min.js"></script>
+
+<script>
+    // @ts-nocheck
+    // https://fomantic-ui.com/modules/sidebar.html#/usage
+    const isSmallScreen = () => window.innerWidth < 768;
+    const sidebar = $("#sidebar");
+
+    // Make sidebar toggleable on small screens and default to hidden
+    if (isSmallScreen()) {
+        sidebar.sidebar({
+            dimPage: false,
+            transition: "overlay",
+            mobileTransition: "overlay",
+            exclusive: false,
+            closable: false,
+        });
+        sidebar.sidebar("attach events", "#sidebar-toggle");
+    } else {
+        sidebar.addClass("visible");
+    }
+
+    // Detect swipe events to show/hide sidebar
+    document.addEventListener("swiped-left", () => sidebar.sidebar("hide"));
+    document.addEventListener("swiped-right", () => sidebar.sidebar("show"));
 </script>
 
 <style>
