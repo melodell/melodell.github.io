@@ -3,6 +3,7 @@
     --white: #ffffff;
     --black: #000000;
     --gray: #16171c;
+    --light-gray: #cbcede;
     --navy-blue: #273249;
     --blue-1: #384c75;
     --blue-2: #5A80CE;
@@ -11,10 +12,14 @@
 
 .theme-light {
     --background-color: var(--white);
+    --sidebar-shadow: var(--light-gray);
+    --text-color: var(--gray);
 }
 
 .theme-dark {
     --background-color: var(--gray);
+    --sidebar-shadow: var(--blue-1);
+    --text-color: var(--white);
 }
 
 body {

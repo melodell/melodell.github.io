@@ -3,9 +3,7 @@
 </div>
 
 <script is:inline>
-    const buttonRef = document.getElementById("theme-toggle");
     const iconRef = document.getElementById("theme-icon");
-    const sidebarRef = document.getElementById("sidebar");
 
     const theme = (() => {
         if (
@@ -25,14 +23,10 @@
             document.body.classList.remove("theme-dark");
             document.body.classList.add("theme-light");
             iconRef.className = "large sun icon";
-            buttonRef.classList.remove("inverted");
-            sidebarRef.classList.remove("inverted");
         } else {
             document.body.classList.remove("theme-light");
             document.body.classList.add("theme-dark");
             iconRef.className = "large moon icon";
-            buttonRef.classList.add("inverted");
-            sidebarRef.classList.add("inverted");
         }
         window.localStorage.setItem("theme", theme);
     };
@@ -42,13 +36,19 @@
     document.getElementById("theme-toggle").addEventListener("click", () => {
         const isDark = document.body.classList.contains("theme-dark");
         setTheme(isDark ? "light" : "dark");
-        console.log("clicky");
     });
 </script>
 
 <style>
+    /* Fomantic overrides */
+    .item::before {
+        background: var(--sidebar-shadow) !important;
+    }
+
+    /* Styles */
     #theme-toggle {
         padding: 20px;
+        min-width: 150px;
     }
     .center-items {
         display: flex !important;
@@ -56,5 +56,6 @@
     }
     i {
         margin: 0 !important;
+        color: var(--text-color) !important;
     }
 </style>

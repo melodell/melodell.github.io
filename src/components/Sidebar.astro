@@ -35,6 +35,24 @@ import ThemeButton from "./ThemeButton.astro";
 </div>
 
 <style>
+    /* Fomantic overrides */
+    .ui.visible.sidebar {
+        box-shadow: 0 0 20px var(--sidebar-shadow) !important;
+    }
+
+    .ui.menu {
+        background: var(--background-color) !important;
+    }
+
+    .item {
+        color: var(--text-color) !important;
+    }
+
+    .item::before {
+        background: var(--sidebar-shadow) !important;
+    }
+
+    /* Styles */
     .center-items {
         display: flex !important;
         justify-content: center !important;
