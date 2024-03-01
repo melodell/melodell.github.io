@@ -2,6 +2,6 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://melodell.github.io",
-    base: "/melinaodell.com",
+    // site: "https://melodell.github.io",
+    // base: "/melinaodell.com",
 });
