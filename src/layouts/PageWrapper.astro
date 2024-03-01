@@ -62,6 +62,9 @@ import "../styles/global.scss";
         }
     </head>
     <body class="theme-dark">
-        <slot />
+        <slot name="sidebar" />
+        <div class="pusher">
+            <slot />
+        </div>
     </body>
 </html>

@@ -1,0 +1,50 @@
+---
+import ThemeButton from "./ThemeButton.astro";
+---
+
+<div id="sidebar" class="ui visible left vertical thin sidebar menu">
+    <!-- Logo -->
+    <div class="item center-items">
+        <a class="ui logo icon image" href="/">
+            <img src="/logo.png" alt="Logo" height="70em" width="70em" />
+        </a>
+    </div>
+
+    <!-- Anchor links -->
+    <div class="item center-items">
+        <div class="menu">
+            <a class="item anchor" href="#experience">Experience</a>
+            <a class="item anchor" href="#projects">Projects</a>
+            <a class="item anchor" href="#papers">Papers</a>
+        </div>
+    </div>
+
+    <!-- Resume Download -->
+    <div class="item center-items">
+        <div class="menu">
+            <a class="item anchor">Resume TBD</a>
+            <a class="item anchor" href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Theme toggle -->
+    <div style="position: absolute; bottom: 0; width: 100%;">
+        <div class="item"></div>
+        <ThemeButton />
+    </div>
+</div>
+
+<style>
+    .center-items {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .anchor {
+        font-size: 1em !important;
+    }
+
+    .menu {
+        margin-top: 0 !important;
+    }
+</style>

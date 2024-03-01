@@ -1,11 +1,11 @@
-<button id="theme-toggle" class="ui basic icon button">
+<div id="theme-toggle" class="item center-items link">
     <i id="theme-icon"></i>
-</button>
+</div>
 
 <script is:inline>
-    const bodyRef = document.querySelector("body");
     const buttonRef = document.getElementById("theme-toggle");
     const iconRef = document.getElementById("theme-icon");
+    const sidebarRef = document.getElementById("sidebar");
 
     const theme = (() => {
         if (
@@ -22,15 +22,17 @@
 
     const setTheme = (theme) => {
         if (theme === "light") {
-            bodyRef.classList.remove("theme-dark");
-            bodyRef.classList.add("theme-light");
-            iconRef.className = "sun icon";
+            document.body.classList.remove("theme-dark");
+            document.body.classList.add("theme-light");
+            iconRef.className = "large sun icon";
             buttonRef.classList.remove("inverted");
+            sidebarRef.classList.remove("inverted");
         } else {
-            bodyRef.classList.remove("theme-light");
-            bodyRef.classList.add("theme-dark");
-            iconRef.className = "moon icon";
+            document.body.classList.remove("theme-light");
+            document.body.classList.add("theme-dark");
+            iconRef.className = "large moon icon";
             buttonRef.classList.add("inverted");
+            sidebarRef.classList.add("inverted");
         }
         window.localStorage.setItem("theme", theme);
     };
@@ -38,7 +40,21 @@
     setTheme(theme);
 
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        const isDark = bodyRef.classList.contains("theme-dark");
+        const isDark = document.body.classList.contains("theme-dark");
         setTheme(isDark ? "light" : "dark");
+        console.log("clicky");
     });
 </script>
+
+<style>
+    #theme-toggle {
+        padding: 20px;
+    }
+    .center-items {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    i {
+        margin: 0 !important;
+    }
+</style>

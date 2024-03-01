@@ -1,4 +1,5 @@
 ---
+import Sidebar from "../components/Sidebar.astro";
 import UserImage from "../components/UserImage.astro";
 import PageWrapper from "../layouts/PageWrapper.astro";
 ---
@@ -10,8 +11,14 @@ import PageWrapper from "../layouts/PageWrapper.astro";
     author="Melina O'Dell"
     useFomantic={true}
 >
+    <Sidebar slot="sidebar" />
     <main>
         <h1>Welcome.</h1>
+        <!-- Intro -->
+        <!-- Experience -->
+        <!-- Projects -->
+        <!-- Papers -->
+        <!-- Contact -->
         <UserImage />
     </main>
 </PageWrapper>
