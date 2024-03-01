@@ -75,6 +75,10 @@ import ThemeButton from "./ThemeButton.astro";
         background: var(--background-color) !important;
     }
 
+    .menu {
+        margin-top: 0 !important;
+    }
+
     .item {
         color: var(--text-color) !important;
         font-size: 1em !important;
@@ -84,6 +88,14 @@ import ThemeButton from "./ThemeButton.astro";
         background: var(--sidebar-shadow) !important;
     }
 
+    .active {
+        text-decoration: underline !important;
+    }
+
+    .active.logo {
+        background: none !important;
+    }
+
     /* Styles */
     .center-items {
         display: flex !important;
@@ -91,19 +103,7 @@ import ThemeButton from "./ThemeButton.astro";
         text-align: center;
     }
 
-    .menu {
-        margin-top: 0 !important;
-    }
-
     .anchor {
         cursor: pointer;
-    }
-
-    .active {
-        text-decoration: underline !important;
-    }
-
-    .active.logo {
-        background: none !important;
     }
 </style>
