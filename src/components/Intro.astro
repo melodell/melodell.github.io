@@ -1,0 +1,58 @@
+---
+import bios from "../data/bio.json";
+import LinkButton from "./LinkButton.astro";
+import UserImage from "./UserImage.astro";
+---
+
+<div class="ui two column stackable grid container">
+    <div class="center aligned column image-column">
+        <UserImage />
+    </div>
+    <div class="left aligned column">
+        <h1>Melina O'Dell</h1>
+        {bios["bios"].map((bio) => <p>{bio}</p>)}
+        <br />
+        <div class="ui center aligned container">
+            <div class="ui small stackable buttons">
+                <a
+                    class="ui envelope button"
+                    id="email-button"
+                    data-tooltip="Copy melodell@umich.edu to clipboard"
+                >
+                    <i class="envelope icon"></i>
+                    Email
+                </a>
+                <LinkButton
+                    className="linkedin"
+                    href="https://www.linkedin.com/in/melina-odell/"
+                    label="LinkedIn"
+                    tooltip="Visit my LinkedIn"
+                />
+                <LinkButton
+                    className="github black"
+                    href="https://github.com/melodell"
+                    label="GitHub"
+                    tooltip="Visit my GitHub"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Copy email to clipboard on click
+    const email = "melodell@umich.edu";
+    const emailButton = document.getElementById("email-button");
+    const copyText = (text) => {
+        navigator.clipboard.writeText(text);
+    };
+    emailButton.addEventListener("click", () => copyText(email));
+</script>
+
+<style>
+    .image-column {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

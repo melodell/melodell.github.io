@@ -3,7 +3,7 @@ import ThemeButton from "../ThemeButton.astro";
 import sections from "../../data/sections.json";
 ---
 
-<div id="sidebar" class="ui left vertical thin sidebar menu">
+<div id="sidebar" class="ui left vertical thin overlay sidebar menu">
     <!-- Logo -->
     <div class="item center-items">
         <img
@@ -72,14 +72,14 @@ import sections from "../../data/sections.json";
     });
 </script>
 
-<!-- Listen for swipe events -->
+{/* Listen for swipe events */}
 <script src="../../scripts/swiped-events.min.js"></script>
 
 <script>
     // @ts-nocheck
     // https://fomantic-ui.com/modules/sidebar.html#/usage
-    const smallScreenSize = 728;
-    const isSmallScreen = () => window.innerWidth < smallScreenSize;
+    const sidebarScreenSizeThreshold = 1160;
+    const isSmallScreen = () => window.innerWidth < sidebarScreenSizeThreshold;
     const sidebar = $("#sidebar");
     const sidebarToggle = document.getElementById("sidebar-toggle");
     const pusher = document.querySelector(".pusher");

@@ -1,4 +1,5 @@
 ---
+import Intro from "../components/Intro.astro";
 import Sidebar from "../components/sidebar/Sidebar.astro";
 import SidebarToggle from "../components/sidebar/SidebarToggle.astro";
 import PageWrapper from "../layouts/PageWrapper.astro";
@@ -12,17 +13,12 @@ import PageWrapper from "../layouts/PageWrapper.astro";
     useFomantic={true}
 >
     <Sidebar slot="sidebar" />
-    <main class="ui text center aligned container">
+    <main class="ui center aligned container">
+        <!-- <main> -->
         <SidebarToggle />
-        <h1 style="color: white;">Welcome.</h1>
-        <h1 style="color: white;">Welcome.</h1>
-        <h1 style="color: white;">Welcome.</h1>
-        <h1 style="color: white;">Welcome.</h1>
-        <h1 style="color: white;">Welcome.</h1>
-        <h1 style="color: white;">Welcome.</h1>
-        <h1 style="color: white;">Welcome.</h1>
-        <h1 style="color: white;">Welcome.</h1>
-        <h1 style="color: white;">Welcome.</h1>
+        <!-- Intro -->
+        <Intro />
+        <div class="ui divider"></div>
 
         <h1 style="color: white;">Welcome.</h1>
         <h1 style="color: white;">Welcome.</h1>
@@ -33,11 +29,17 @@ import PageWrapper from "../layouts/PageWrapper.astro";
         <h1 style="color: white;">Welcome.</h1>
         <h1 style="color: white;">Welcome.</h1>
         <h1 style="color: white;">Welcome.</h1>
-        <!-- Intro -->
+
         <!-- Experience -->
         <!-- Projects -->
         <!-- Papers -->
         <!-- Contact -->
-        <!-- <UserImage /> -->
     </main>
+
+    <style>
+        .ui.container {
+            max-width: 933px;
+            margin-top: 25px;
+        }
+    </style>
 </PageWrapper>
