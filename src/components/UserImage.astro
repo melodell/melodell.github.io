@@ -37,7 +37,7 @@ const imageRotationTimeString = `${imageRotationTime}s`;
     <span id="timer-bar"></span>
 </div>
 
-<script define:vars={{ imageRotationTime }}>
+<script is:inline define:vars={{ imageRotationTime }}>
     // @ts-nocheck
     // Reset the timer animation on click
     const resetAnimation = () => {

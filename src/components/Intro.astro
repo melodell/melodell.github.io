@@ -40,10 +40,11 @@ import UserImage from "./UserImage.astro";
 </div>
 
 <script>
+    // @ts-nocheck
     // Copy email to clipboard on click
     const email = "melodell@umich.edu";
     const emailButton = document.getElementById("email-button");
-    const copyText = (text) => {
+    const copyText = (text: string) => {
         navigator.clipboard.writeText(text);
     };
     emailButton.addEventListener("click", () => copyText(email));
