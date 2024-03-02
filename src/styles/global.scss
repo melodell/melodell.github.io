@@ -7,6 +7,7 @@
     --navy-blue: #273249;
     --blue-1: #384c75;
     --blue-2: #5A80CE;
+    --blue-2-bright: #5584e3;
     --blue-3: #9dbaf2;
 }
 
@@ -26,4 +27,12 @@ body {
     background: var(--background-color) !important;
     color: var(--text-color) !important;
     font-size: 16px;
+}
+
+a {
+    color: var(--blue-2-bright);
+}
+
+h2 {
+    margin-top: 0;
 }

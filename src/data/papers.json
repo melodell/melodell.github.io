@@ -1,0 +1,28 @@
+{
+    "coursePapers": [
+        {
+            "title": "Improved Piazza Search",
+            "authors": [
+                "Julia Aoun",
+                "Chimmuanya Iheanyi-Igwe",
+                "Mariam Mahmoud",
+                "Melina O’Dell",
+                "Sydney Swider"
+            ],
+            "date": "April 2023",
+            "pdfLink": "/papers/Piazza_Search_Final_Project_Report.pdf"
+        },
+        {
+            "title": "Optimizing Text Entry with Intuitive Keyboard Shortcuts: User-Centered Insights",
+            "authors": [
+                "Yutong Ai",
+                "Carter Galbus",
+                "Cooper Hickmott",
+                "Alex Morton",
+                "Melina O’Dell"
+            ],
+            "date": "December 2023",
+            "pdfLink": "/papers/EECS593_HCI_Fall_2023_Group_19.pdf"
+        }
+    ]
+}

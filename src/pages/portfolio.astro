@@ -1,6 +1,9 @@
 ---
 import Contact from "../components/Contact.astro";
+import Experience from "../components/Experience.astro";
 import Intro from "../components/Intro.astro";
+import Papers from "../components/Papers.astro";
+import Projects from "../components/Projects.astro";
 import Sidebar from "../components/sidebar/Sidebar.astro";
 import SidebarToggle from "../components/sidebar/SidebarToggle.astro";
 import PageWrapper from "../layouts/PageWrapper.astro";
@@ -16,19 +19,22 @@ import PageWrapper from "../layouts/PageWrapper.astro";
     <Sidebar slot="sidebar" />
     <main class="ui center aligned container">
         <SidebarToggle />
+
         <!-- Intro -->
         <Intro />
         <div class="ui divider"></div>
 
         <!-- Experience -->
-        <span id="experience"></span>
-        <!-- <div class="ui divider"></div> -->
+        <Experience id="experience" />
+        <div class="ui divider"></div>
 
         <!-- Projects -->
-        <!-- <div class="ui divider"></div> -->
+        <Projects id="projects" />
+        <div class="ui divider"></div>
 
         <!-- Papers -->
-        <!-- <div class="ui divider"></div> -->
+        <Papers id="papers" />
+        <div class="ui divider"></div>
 
         <!-- Contact -->
         <Contact id="contact" />

@@ -1,0 +1,37 @@
+---
+import papers from "../data/papers.json";
+import Section from "./Section.astro";
+const coursePaperList = papers["coursePapers"];
+---
+
+<Section title="Papers" classNames={["left aligned text"]}>
+    <div class="ui list">
+        <!-- <h3>Publications</h3> -->
+        <h3>Coursework</h3>
+        {
+            coursePaperList.map((paper) => (
+                <div class="item paper-entry">
+                    <div class="header">
+                        <a href={paper["pdfLink"]} target="_blank">
+                            {paper["title"]}
+                        </a>
+                    </div>
+                    <div class="description">
+                        {paper["authors"].join(", ")}. {paper["date"]}.
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</Section>
+
+<style>
+    .header,
+    .description {
+        color: var(--text-color) !important;
+    }
+
+    .paper-entry {
+        margin-bottom: 1em;
+    }
+</style>
