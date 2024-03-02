@@ -1,11 +1,16 @@
 ---
 import { Image } from "astro:assets";
+import image0 from "../images/melodell-0.png";
 import image1 from "../images/melodell-1.png";
 import image2 from "../images/melodell-2.png";
 import image3 from "../images/melodell-3.png";
-import image4 from "../images/melodell-4.png";
 
-const images = [image1, image2, image3, image4];
+// Import and add images to list here
+const images = [image0, image1, image2, image3];
+const imageSize = 330;
+const imageSizeString = `${imageSize}px`;
+const imageRotationTime = 10;
+const imageRotationTimeString = `${imageRotationTime}s`;
 ---
 
 {
@@ -13,7 +18,10 @@ const images = [image1, image2, image3, image4];
     This makes sure there isn't any lag when cycling through images on click */
 }
 
-<div class="image-wrapper">
+<div
+    class="image-wrapper"
+    style=`width: ${imageSize}px; height: ${imageSize}px`
+>
     {
         images.map((image) => (
             <Image
@@ -21,29 +29,50 @@ const images = [image1, image2, image3, image4];
                 src={image}
                 alt="Melina O'Dell"
                 loading="eager"
-                height={500}
-                width={500}
+                width={imageSize}
+                height={imageSize}
             />
         ))
     }
+    <span id="timer-bar"></span>
 </div>
 
-<script>
+<script define:vars={{ imageRotationTime }}>
+    // @ts-nocheck
+    // Reset the timer animation on click
+    const resetAnimation = () => {
+        const animations = document.getAnimations();
+        for (let animation of animations) {
+            animation.cancel();
+            animation.play();
+        }
+    };
+
     const imageWrapper = document.querySelector(".image-wrapper");
     const images = document.getElementsByClassName("user-image");
     // Show the first image on load
     images[0].classList.add("active");
 
-    // Cycle through the images on click by changing z-index
     let selected = 0;
-    imageWrapper?.addEventListener("click", () => {
+    // Cycle through the images by changing the z-index
+    const showNextImage = () => {
         images[selected].classList.remove("active");
         selected = (selected + 1) % images.length;
         images[selected].classList.add("active");
+        resetAnimation();
+    };
+    // Change image every 10 seconds
+    let interval = setInterval(showNextImage, imageRotationTime * 1000);
+
+    // Cycle through the images on click and reset interval
+    imageWrapper?.addEventListener("click", () => {
+        clearInterval(interval);
+        showNextImage();
+        interval = setInterval(showNextImage, imageRotationTime * 1000);
     });
 </script>
 
-<style>
+<style define:vars={{ imageSizeString, imageRotationTimeString }}>
     .image-wrapper {
         position: relative;
     }
@@ -56,5 +85,30 @@ const images = [image1, image2, image3, image4];
 
     .active {
         z-index: 1;
+    }
+
+    @keyframes timer {
+        0% {
+            width: 0;
+        }
+        50% {
+            width: calc(var(--imageSizeString) / 2);
+        }
+        100% {
+            width: var(--imageSizeString);
+        }
+    }
+
+    #timer-bar {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: var(--imageSizeString);
+        border: 2px solid var(--blue-2);
+
+        animation-name: timer;
+        animation-duration: var(--imageRotationTimeString);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
     }
 </style>
