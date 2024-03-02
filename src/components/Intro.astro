@@ -1,5 +1,6 @@
 ---
 import bios from "../data/bio.json";
+import socials from "../data/socials.json";
 import LinkButton from "./LinkButton.astro";
 import UserImage from "./UserImage.astro";
 ---
@@ -24,13 +25,13 @@ import UserImage from "./UserImage.astro";
                 </a>
                 <LinkButton
                     className="linkedin"
-                    href="https://www.linkedin.com/in/melina-odell/"
+                    href={socials["linkedin"]}
                     label="LinkedIn"
                     tooltip="Visit my LinkedIn"
                 />
                 <LinkButton
                     className="github black"
-                    href="https://github.com/melodell"
+                    href={socials["github"]}
                     label="GitHub"
                     tooltip="Visit my GitHub"
                 />
@@ -39,12 +40,12 @@ import UserImage from "./UserImage.astro";
     </div>
 </div>
 
-<script>
+<script is:inline define:vars={{ socials }}>
     // @ts-nocheck
     // Copy email to clipboard on click
-    const email = "melodell@umich.edu";
+    const email = socials["email"]["umich"];
     const emailButton = document.getElementById("email-button");
-    const copyText = (text: string) => {
+    const copyText = (text) => {
         navigator.clipboard.writeText(text);
     };
     emailButton.addEventListener("click", () => copyText(email));
