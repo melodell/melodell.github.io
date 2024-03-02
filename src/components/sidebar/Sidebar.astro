@@ -1,6 +1,8 @@
 ---
 import ThemeButton from "../ThemeButton.astro";
 import sections from "../../data/sections.json";
+
+const resumeLink = "/ResumeMelinaODell.pdf";
 ---
 
 <div id="sidebar" class="ui left vertical thin overlay sidebar menu">
@@ -32,7 +34,7 @@ import sections from "../../data/sections.json";
     <div class="item center-items">
         <div class="menu">
             <!-- Resume Download -->
-            <a class="item">
+            <a class="item" href={resumeLink}>
                 Resume
                 <i class="external alternate icon"></i>
             </a>
