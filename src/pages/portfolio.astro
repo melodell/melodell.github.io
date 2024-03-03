@@ -38,12 +38,17 @@ import PageWrapper from "../layouts/PageWrapper.astro";
 
         <!-- Contact -->
         <Contact id="contact" />
-
-        <style>
-            .ui.container {
-                max-width: 933px;
-                margin-top: 25px;
-            }
-        </style>
     </main>
 </PageWrapper>
+
+<style>
+    /* Fomantic overrides */
+    .ui.container {
+        max-width: 933px;
+        margin-top: 25px;
+    }
+
+    .ui.divider {
+        border-top: 1px solid var(--sidebar-shadow) !important;
+    }
+</style>

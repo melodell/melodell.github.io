@@ -2,10 +2,19 @@
 import papers from "../data/papers.json";
 import Section from "./Section.astro";
 const coursePaperList = papers["coursePapers"];
+
+const getAuthors = (arr: string[]) => {
+    let l = arr.length;
+    if (l < 2) return arr[0];
+    if (l < 3) return arr.join(` and `);
+    arr = arr.slice();
+    arr[l - 1] = `and ${arr[l - 1]}`;
+    return arr.join(", ");
+};
 ---
 
 <Section title="Papers" classNames={["left aligned text"]}>
-    <div class="ui list">
+    <div class="ui list" style="width: inherit;">
         <!-- <h3>Publications</h3> -->
         <h3>Coursework</h3>
         {
@@ -17,7 +26,7 @@ const coursePaperList = papers["coursePapers"];
                         </a>
                     </div>
                     <div class="description">
-                        {paper["authors"].join(", ")}. {paper["date"]}.
+                        {getAuthors(paper["authors"])}. {paper["date"]}.
                     </div>
                 </div>
             ))
