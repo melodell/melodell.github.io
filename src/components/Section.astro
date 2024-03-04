@@ -8,12 +8,6 @@ const { title, classNames }: Props = Astro.props;
 ---
 
 <h2>{title}</h2>
-<div class:list={["ui", classNames, "container", "section"]}>
+<div class:list={["ui", classNames, "container"]}>
     <slot />
 </div>
-
-<style>
-    .section {
-        padding: 5px 0;
-    }
-</style>
