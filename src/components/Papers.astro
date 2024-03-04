@@ -1,6 +1,13 @@
 ---
 import papers from "../data/papers.json";
 import Section from "./Section.astro";
+
+interface Props {
+    id: string;
+}
+
+const { id }: Props = Astro.props;
+
 const coursePaperList = papers["coursePapers"];
 
 const getAuthors = (arr: string[]) => {
@@ -13,8 +20,8 @@ const getAuthors = (arr: string[]) => {
 };
 ---
 
-<Section title="Papers" classNames={["left aligned text"]}>
-    <div class="ui list" style="width: inherit;">
+<Section id={id} title="Papers" classNames={["left aligned text"]}>
+    <div class="ui list">
         <!-- <h3>Publications</h3> -->
         <h3>Coursework</h3>
         {

@@ -1,13 +1,14 @@
 ---
 interface Props {
+    id: string;
     title: string;
     classNames?: string[];
 }
 
-const { title, classNames }: Props = Astro.props;
+const { id, title, classNames }: Props = Astro.props;
 ---
 
-<h2>{title}</h2>
+<h2 id={id}>{title}</h2>
 <div class:list={["ui", classNames, "container"]}>
     <slot />
 </div>
