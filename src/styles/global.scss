@@ -13,13 +13,13 @@
 
 .theme-light {
     --background-color: var(--white);
-    --sidebar-shadow: var(--light-gray);
+    --accent: var(--light-gray);
     --text-color: var(--gray);
 }
 
 .theme-dark {
     --background-color: var(--gray);
-    --sidebar-shadow: var(--blue-1);
+    --accent: var(--blue-1);
     --text-color: var(--white);
 }
 

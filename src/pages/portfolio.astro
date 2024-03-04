@@ -1,6 +1,5 @@
 ---
 import Contact from "../components/Contact.astro";
-import Experience from "../components/Experience.astro";
 import Intro from "../components/Intro.astro";
 import Papers from "../components/Papers.astro";
 import Projects from "../components/Projects.astro";
@@ -25,8 +24,8 @@ import PageWrapper from "../layouts/PageWrapper.astro";
         <div class="ui divider"></div>
 
         <!-- Experience -->
-        <Experience id="experience" />
-        <div class="ui divider"></div>
+        <!-- <Experience id="experience" />
+        <div class="ui divider"></div> -->
 
         <!-- Projects -->
         <Projects id="projects" />
@@ -49,6 +48,6 @@ import PageWrapper from "../layouts/PageWrapper.astro";
     }
 
     .ui.divider {
-        border-top: 1px solid var(--sidebar-shadow) !important;
+        border-top: 1px solid var(--accent) !important;
     }
 </style>
