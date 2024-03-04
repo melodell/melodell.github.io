@@ -1,3 +1,17 @@
-<div class="ui container">
-    <h2>Projects</h2>
-</div>
+---
+import projects from "../data/projects.json";
+import ProjectCard from "./ProjectCard.astro";
+import Section from "./Section.astro";
+
+interface Props {
+    id: string;
+}
+
+const { id }: Props = Astro.props;
+---
+
+<Section id={id} title="Projects" classNames={["text"]}>
+    <div class="ui two centered stackable cards" style="margin-top: 10px;">
+        {projects["projects"].map((proj) => <ProjectCard {...proj} />)}
+    </div>
+</Section>

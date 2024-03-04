@@ -1,0 +1,82 @@
+---
+interface Props {
+    title: string;
+    summary: string;
+    tech: string[];
+    url?: string;
+    description: string;
+    icon?: string;
+    emoji?: string;
+    promo: string;
+}
+
+const { title, summary, tech, url, description, icon, emoji, promo }: Props =
+    Astro.props;
+
+const getLabelColor = (tech: string) => {
+    return "blue";
+};
+---
+
+<div class="ui card">
+    <div class="content">
+        <div class="left floated image">
+            {icon && <i class={`${icon} big icon`} />}
+            {emoji && <em data-emoji={emoji} class="medium" />}
+        </div>
+        <div class="header">{title}</div>
+        <div class="meta">{promo}</div>
+        <div class="description">{summary}</div>
+        <!-- {
+            url ? (
+                <a href={url}>
+                    <div class={`ui right floating icon label`}>
+                        <i class={`github icon`} />
+                    </div>
+                </a>
+            ) : null
+        } -->
+    </div>
+    <div class={`extra content`}>
+        <div class="ui labels">
+            {
+                tech.map((t) => (
+                    <div class={`ui ${getLabelColor(t)} label`}>{t}</div>
+                ))
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Fomantic overrides */
+    .ui.card {
+        background: var(--background-color) !important;
+        box-shadow:
+            0 1px 3px 0 var(--accent),
+            0 0 0 1px var(--accent) !important;
+
+        margin: 20px;
+    }
+
+    .ui.card > .content > .header,
+    .ui.card > .content > .description,
+    .ui.card > .extra,
+    .ui.card .meta {
+        color: var(--text-color) !important;
+    }
+
+    .ui.card .meta {
+        opacity: 0.5;
+        font-size: 0.9em;
+    }
+
+    .ui.card > .extra {
+        border-top: 1px solid var(--accent) !important;
+    }
+
+    i.icon {
+        width: 3em !important;
+        line-height: normal !important;
+    }
+</style>
