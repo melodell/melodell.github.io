@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "Twitter Countdown Bot",
-            "summary": "A simple Twitter bot to countdown the days to a movie premiere. Uses Tweepy to access the Twitter API. Deployed and scheduled with Heroku to make daily tweets.",
+            "summary": "A simple Twitter bot to countdown the days to a movie premiere. Uses the Tweepy library to access the Twitter API. Deployed and scheduled with Heroku to make daily tweets.",
             "tech": [
                 "Python",
                 "Twitter API",
@@ -21,7 +21,7 @@
                 "React",
                 "JavaScript",
                 "HTML",
-                "CSS/SCSS",
+                "CSS",
                 "GH Pages"
             ],
             "description": "FIXME LONGER DESCRIPTION",
@@ -31,65 +31,69 @@
         },
         {
             "title": "Dotfiles",
-            "summary": "FIXME",
+            "summary": "My dotfiles! Continuously updated and filled with bash customizations, aliases, my Emacs configuration, and more.",
             "tech": [
                 "Bash",
-                "ELisp"
+                "ELisp", 
+                "Unix"
             ],
-            "description": "FIXME LONGER DESCRIPTION",
+            "description": "FIXME LONGER DESCRIPTION  Find my bash customizations in .bash_profile, my Emacs config in .emacs.d/init.el, and the things I've learned in .always_forget. Credit to Andrew DeOrio for sharing his terminal enthusiasm with me!",
             "url": "https://github.com/melodell/dotfiles",
             "icon": "terminal",
-            "promo": "FIXME"
-        },
-        {
-            "title": "Search Engine Dataset Enhancements",
-            "summary": "FIXME",
-            "tech": [
-                "Python",
-                "Pytest",
-                "MapReduce"
-            ],
-            "description": "FIXME LONGER DESCRIPTION",
-            "emoji": "mag",
-            "promo": "FIXME"
+            "promo": "\"git status\"? You mean \"gs\"?"
         },
         {
             "title": "Course Schedule Converter",
-            "summary": "FIXME",
+            "summary": "A Python program to convert my class schedule (HTML) to an iCal file to automate making calendar events.",
             "tech": [
                 "Python",
-                "Beautiful Soup (BS4)",
+                "BeautifulSoup",
                 "iCal"
             ],
             "description": "FIXME LONGER DESCRIPTION",
             "url": "https://github.com/melodell/schedule-to-ical",
             "emoji": "calendar",
-            "promo": "FIXME"
+            "promo": "Saving myself 20 mins/semester"
+        },
+        {
+            "title": "Search Engine Dataset Enhancements",
+            "summary": "A redesigned dataset and test suite, and a workflow to automate future dataset regeneration for the search engine project in EECS 485.",
+            "tech": [
+                "Python",
+                "SQLite",
+                "Pytest",
+                "MapReduce"
+            ],
+            "description": "FIXME LONGER DESCRIPTION  (301 files, 1.6 million lines)",
+            "emoji": "mag",
+            "promo": "One of the largest project updates course staff has ever seen"
         },
         {
             "title": "Instructor Dashboard",
-            "summary": "FIXME",
+            "summary": "A full-stack dashboard to summarize and display classroom performance statistics to elementary school teachers.",
             "tech": [
                 "Angular",
-                "PHP",
                 "Laravel",
+                "TypeScript",
+                "PHP",
                 "MySQL"
             ],
             "description": "FIXME LONGER DESCRIPTION",
             "emoji": "woman_teacher",
-            "promo": "FIXME"
+            "promo": "My LAZ intern project"
         },
         {
             "title": "Doors on Floorplans",
-            "summary": "FIXME",
+            "summary": "Supporting Access Control devices (doors) on the Floorplans UI in the Verkada Command platform. Users can move, scale, and rotate door representations to match their physical space.",
             "tech": [
                 "React",
-                "TypeScript",
-                "Redux"
+                "Redux",
+                "TypeScript"
             ],
             "description":"FIXME LONGER DESCRIPTION",
+            "url": "https://help.verkada.com/en/articles/8251110-add-and-view-doors-on-floor-plans",
             "emoji": "door",
-            "promo": "FIXME"
+            "promo": "My Verkada intern project"
         }
     ]   
 }

@@ -13,8 +13,53 @@ interface Props {
 const { title, summary, tech, url, description, icon, emoji, promo }: Props =
     Astro.props;
 
-const getLabelColor = (tech: string) => {
-    return "blue";
+// Tech categories to determine label color
+const languages = new Set([
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+    "Bash",
+    "ELisp",
+    "PHP",
+]);
+const libraries = new Set(["React", "Angular", "Astro", "Laravel", "Redux"]);
+const deploy = new Set(["Heroku", "GH Pages", "AWS EC2", "Docker"]);
+const database = new Set(["MySQL", "SQLite"]);
+const misc = new Set([
+    "Twitter API",
+    "Pytest",
+    "MapReduce",
+    "BeautifulSoup",
+    "iCal",
+    "Unix",
+]);
+
+const getLabelStyle = (tech: string) => {
+    let backgroundColor;
+    let fontColor;
+
+    if (languages.has(tech)) {
+        backgroundColor = "var(--blue-2-bright)";
+        fontColor = "var(--white)";
+    } else if (libraries.has(tech)) {
+        backgroundColor = "var(--blue-1)";
+        fontColor = "var(--white)";
+    } else if (deploy.has(tech)) {
+        backgroundColor = "var(--light-gray)";
+    } else if (database.has(tech)) {
+        backgroundColor = "var(--blue-3)";
+        fontColor = "var(--white)";
+    } else if (misc.has(tech)) {
+        backgroundColor = "var(--blue-4)";
+    } else {
+        return "var(--white)";
+    }
+    return {
+        backgroundColor: backgroundColor,
+        color: fontColor,
+    };
 };
 ---
 
@@ -27,21 +72,14 @@ const getLabelColor = (tech: string) => {
         <div class="header">{title}</div>
         <div class="meta">{promo}</div>
         <div class="description">{summary}</div>
-        <!-- {
-            url ? (
-                <a href={url}>
-                    <div class={`ui right floating icon label`}>
-                        <i class={`github icon`} />
-                    </div>
-                </a>
-            ) : null
-        } -->
     </div>
     <div class={`extra content`}>
         <div class="ui labels">
             {
                 tech.map((t) => (
-                    <div class={`ui ${getLabelColor(t)} label`}>{t}</div>
+                    <div class="ui label" style={getLabelStyle(t)}>
+                        {t}
+                    </div>
                 ))
             }
         </div>
