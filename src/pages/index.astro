@@ -1,4 +1,10 @@
 ---
+import Contact from "../components/Contact.astro";
+import Intro from "../components/Intro.astro";
+import Papers from "../components/Papers.astro";
+import Projects from "../components/Projects.astro";
+import Sidebar from "../components/sidebar/Sidebar.astro";
+import SidebarToggle from "../components/sidebar/SidebarToggle.astro";
 import PageWrapper from "../layouts/PageWrapper.astro";
 ---
 
@@ -9,16 +15,39 @@ import PageWrapper from "../layouts/PageWrapper.astro";
     author="Melina O'Dell"
     useFomantic={true}
 >
-    <main>
-        <div class="ui centered cards">
-            <div class="ui card" style="margin-top: 100px;">
-                <div class="content">
-                    <div class="header">Melina O'Dell's personal website</div>
-                    <div class="description">
-                        This website is a work-in-progress. Stay tuned!
-                    </div>
-                </div>
-            </div>
-        </div>
+    <Sidebar slot="sidebar" />
+    <main class="ui center aligned container">
+        <SidebarToggle />
+
+        <!-- Intro -->
+        <Intro />
+        <div class="ui divider"></div>
+
+        <!-- Experience -->
+        <!-- <Experience id="experience" />
+        <div class="ui divider"></div> -->
+
+        <!-- Projects -->
+        <Projects id="projects" />
+        <div class="ui divider"></div>
+
+        <!-- Papers -->
+        <Papers id="papers" />
+        <div class="ui divider"></div>
+
+        <!-- Contact -->
+        <Contact id="contact" />
     </main>
 </PageWrapper>
+
+<style>
+    /* Fomantic overrides */
+    .ui.container {
+        max-width: 933px;
+        margin-top: 25px;
+    }
+
+    .ui.divider {
+        border-top: 1px solid var(--accent) !important;
+    }
+</style>

@@ -69,9 +69,22 @@ const getLabelStyle = (tech: string) => {
             {icon && <i class={`${icon} big icon`} />}
             {emoji && <em data-emoji={emoji} class="medium" />}
         </div>
-        <div class="header">{title}</div>
+        <div class="header">
+            {title}
+        </div>
         <div class="meta">{promo}</div>
         <div class="description">{summary}</div>
+        {
+            url ? (
+                <a href={url}>
+                    <div class={`ui right floating icon label`}>
+                        <i
+                            class={`${url.includes("github") ? "github" : "external"} icon`}
+                        />
+                    </div>
+                </a>
+            ) : null
+        }
     </div>
     <div class={`extra content`}>
         <div class="ui labels">
