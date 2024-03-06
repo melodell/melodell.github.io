@@ -1,4 +1,6 @@
-<div id="sidebar-toggle" class="caret sidebar-closed"></div>
+<div id="sidebar-toggle" class="caret sidebar-closed">
+    <div id="sidebar-toggle-hitbox"></div>
+</div>
 
 <style>
     :root {
@@ -30,6 +32,15 @@
         animation-iteration-count: infinite;
     }
 
+    #sidebar-toggle-hitbox {
+        position: fixed;
+        height: calc(3 * var(--caret-height));
+        width: calc(3 * var(--caret-width));
+        top: -5px;
+        left: -5px;
+        z-index: 1;
+    }
+
     .sidebar-closed {
         left: 15px;
         transition: left ease 0.5s;
@@ -42,10 +53,6 @@
 
     .caret {
         position: relative;
-    }
-
-    .caret:hover {
-        opacity: 0.8;
     }
 
     .caret:after {

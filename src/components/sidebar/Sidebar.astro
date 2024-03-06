@@ -84,6 +84,9 @@ const resumeLink = "/ResumeMelinaODell.pdf";
     const isSmallScreen = () => window.innerWidth < sidebarScreenSizeThreshold;
     const sidebar = $("#sidebar");
     const sidebarToggle = document.getElementById("sidebar-toggle");
+    const sidebarToggleHitbox = document.getElementById(
+        "sidebar-toggle-hitbox",
+    );
     const pusher = document.querySelector(".pusher");
 
     const showSidebar = () => {
@@ -109,7 +112,7 @@ const resumeLink = "/ResumeMelinaODell.pdf";
         });
 
         // Show/hide sidebar on toggle arrow click
-        sidebarToggle.addEventListener("click", () => {
+        sidebarToggleHitbox.addEventListener("click", () => {
             sidebar.sidebar("is hidden") ? showSidebar() : hideSidebar();
         });
 
