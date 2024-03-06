@@ -66,7 +66,14 @@ const getLabelStyle = (tech: string) => {
 <div class="ui card">
     <div class="content">
         <div class="left floated image">
-            {icon && <i class={`${icon} big icon`} />}
+            {
+                icon && (
+                    <i
+                        class={`${icon} big icon`}
+                        style="width: 3em; line-height: normal;"
+                    />
+                )
+            }
             {emoji && <em data-emoji={emoji} class="medium" />}
         </div>
         <div class="header">
@@ -124,10 +131,5 @@ const getLabelStyle = (tech: string) => {
 
     .ui.card > .extra {
         border-top: 1px solid var(--accent) !important;
-    }
-
-    i.icon {
-        width: 3em !important;
-        line-height: normal !important;
     }
 </style>
