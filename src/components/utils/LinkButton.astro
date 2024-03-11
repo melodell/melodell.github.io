@@ -1,26 +1,28 @@
 ---
 interface Props {
-    className: string;
-    href: string;
+    icon?: string;
+    id?: string;
+    href?: string;
     label: string;
-    tooltip: string;
+    tooltip?: string;
 }
 
-const { className, href, label, tooltip }: Props = Astro.props;
+const { icon, id, href, label, tooltip }: Props = Astro.props;
 ---
 
 <a
-    class=`ui ${className} button`
+    class=`ui ${icon} button`
+    id={id}
     href={href}
     target="_blank"
     data-tooltip={tooltip}
 >
-    <i class=`${className} icon`></i>
+    <i class=`${icon} icon`></i>
     {label}
 </a>
 
 <style>
-    i {
+    i.github.black {
         color: var(--white) !important;
     }
 </style>

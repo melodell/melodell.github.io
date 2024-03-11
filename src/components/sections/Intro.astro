@@ -15,22 +15,20 @@ import UserImage from "../utils/UserImage.astro";
         <br />
         <div class="ui center aligned container">
             <div class="ui small stackable buttons">
-                <a
-                    class="ui envelope button"
-                    id="email-button"
-                    data-tooltip="Copy melodell@umich.edu to clipboard"
-                >
-                    <i class="envelope icon"></i>
-                    Email
-                </a>
                 <LinkButton
-                    className="linkedin"
+                    icon="envelope"
+                    id="email-button"
+                    label="Email"
+                    tooltip="Copy melodell@umich.edu to clipboard"
+                />
+                <LinkButton
+                    icon="linkedin"
                     href={socials["linkedin"]}
                     label="LinkedIn"
                     tooltip="Visit my LinkedIn"
                 />
                 <LinkButton
-                    className="github black"
+                    icon="github black"
                     href={socials["github"]}
                     label="GitHub"
                     tooltip="Visit my GitHub"
