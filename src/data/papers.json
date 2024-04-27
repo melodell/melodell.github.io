@@ -1,5 +1,31 @@
 {
+    "publications": [
+        {
+            "title": "A Custom Generative AI Chatbot as a Course Resource (to be presented at ASEE 2024)",
+            "authors": [
+                "Yutong Ai",
+                "Maya Baveja",
+                "Akanksha Girdhar",
+                "Melina O'Dell",
+                "Andrew DeOrio"
+            ],
+            "conference": "American Society of Engineering Education (ASEE)",
+            "date": "June 2024",
+            "pdfLink": ""
+        }
+    ],
     "coursePapers": [
+        {
+            "title": "Can AI models generate free response questions for AI courses?",
+            "authors": [
+                "Yutong Ai",
+                "Melina O'Dell",
+                "Mingye Chen",
+                "Fanghao Zhang"
+            ],
+            "date": "April 2024",
+            "pdfLink": "/papers/EECS592_Team_2_Project_Report.pdf"
+        },
         {
             "title": "Optimizing Text Entry with Intuitive Keyboard Shortcuts: User-Centered Insights",
             "authors": [
@@ -7,7 +33,7 @@
                 "Carter Galbus",
                 "Cooper Hickmott",
                 "Alex Morton",
-                "Melina O’Dell"
+                "Melina O'Dell"
             ],
             "date": "December 2023",
             "pdfLink": "/papers/EECS593_HCI_Fall_2023_Group_19.pdf"
@@ -18,7 +44,7 @@
                 "Julia Aoun",
                 "Chimmuanya Iheanyi-Igwe",
                 "Mariam Mahmoud",
-                "Melina O’Dell",
+                "Melina O'Dell",
                 "Sydney Swider"
             ],
             "date": "April 2023",

@@ -8,7 +8,8 @@ interface Props {
 
 const { id }: Props = Astro.props;
 
-const coursePaperList = papers["coursePapers"];
+const publications = papers["publications"];
+const coursePapers = papers["coursePapers"];
 
 const getAuthors = (arr: string[]) => {
     let l = arr.length;
@@ -22,10 +23,29 @@ const getAuthors = (arr: string[]) => {
 
 <Section id={id} title="Papers" classNames={["left aligned text"]}>
     <div class="ui list">
-        <!-- <h3>Publications</h3> -->
+        <h3>Publications</h3>
+        {
+            publications.map((paper) => (
+                <div class="item paper-entry">
+                    <div class="header">
+                        {paper["pdfLink"] ? (
+                            <a href={paper["pdfLink"]} target="_blank">
+                                {paper["title"]}
+                            </a>
+                        ) : (
+                            paper["title"]
+                        )}
+                    </div>
+                    <div class="description">
+                        {getAuthors(paper["authors"])}. {paper["conference"]},{" "}
+                        {paper["date"]}.
+                    </div>
+                </div>
+            ))
+        }
         <h3>Coursework</h3>
         {
-            coursePaperList.map((paper) => (
+            coursePapers.map((paper) => (
                 <div class="item paper-entry">
                     <div class="header">
                         <a href={paper["pdfLink"]} target="_blank">
