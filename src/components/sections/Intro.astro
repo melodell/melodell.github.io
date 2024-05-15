@@ -3,6 +3,8 @@ import bios from "../../data/bio.json";
 import socials from "../../data/socials.json";
 import LinkButton from "../utils/LinkButton.astro";
 import UserImage from "../utils/UserImage.astro";
+
+const resumeLink = "/ResumeMelinaODell.pdf";
 ---
 
 <div class="ui two column stackable grid container">
@@ -32,6 +34,12 @@ import UserImage from "../utils/UserImage.astro";
                     href={socials["github"]}
                     label="GitHub"
                     tooltip="Visit my GitHub"
+                />
+                <LinkButton
+                    icon="file alternate"
+                    href={resumeLink}
+                    label="Resume"
+                    tooltip="View my resume"
                 />
             </div>
         </div>
