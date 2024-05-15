@@ -1,0 +1,104 @@
+---
+import { Markdown } from "@astropub/md";
+import LinkButton from "../utils/LinkButton.astro";
+
+interface Props {
+    title: string;
+    summary: string;
+    url?: string;
+    description: string;
+    promo: string;
+}
+
+const { title, summary, url, description, promo }: Props = Astro.props;
+
+const getTitleClass = (title: string) => {
+    return title.toLowerCase().split(" ").join("-");
+};
+---
+
+<!-- Modal -->
+<div id=`${getTitleClass(title)}-modal` class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">{title}</div>
+    <div class="content">
+        <div class="description">
+            <Markdown of={"# Hi there!"} />
+            {description}
+        </div>
+        {
+            url && (
+                <>
+                    <div class="ui divider" />
+                    {url.includes("github") ? (
+                        <LinkButton
+                            icon="github black"
+                            label="GitHub"
+                            href={url}
+                        />
+                    ) : (
+                        <LinkButton
+                            icon="external grey"
+                            label="External"
+                            href={url}
+                        />
+                    )}
+                </>
+            )
+        }
+    </div>
+</div>
+
+<script is:inline define:vars={{ title }}>
+    // Display modal when project card description button is clicked
+    // @ts-nocheck
+    const getTitleClass = (title) => {
+        return title.toLowerCase().split(" ").join("-");
+    };
+    const titleClass = getTitleClass(title);
+    const card = document.getElementById(`${titleClass}-desc`);
+    const modal = $(`#${titleClass}-modal`);
+
+    // Set modal options
+    modal.modal({
+        duration: 200,
+    });
+
+    // Show modal on click
+    card.addEventListener("click", () => {
+        $(modal.modal("show"));
+    });
+</script>
+
+<style>
+    /* Fomantic overrides */
+    .ui.modal {
+        box-shadow:
+            0 1px 3px 0 var(--accent),
+            0 0 0 1px var(--accent) !important;
+    }
+
+    .ui.modal > .header,
+    .ui.modal > .content,
+    .ui.modal > .content > .description,
+    .ui.modal > .content > a {
+        background: var(--background-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    .ui.modal > .header {
+        border-bottom: 1px solid var(--accent) !important;
+    }
+
+    .ui.modal > .content > .description {
+        margin-bottom: 1em;
+    }
+
+    .ui.modal > .content > a {
+        color: var(--blue-2-bright) !important;
+    }
+
+    .ui.divider {
+        border-color: var(--accent) !important;
+    }
+</style>

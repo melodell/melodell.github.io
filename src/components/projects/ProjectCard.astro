@@ -1,4 +1,7 @@
 ---
+import ProjectCardLinkSelector from "./ProjectCardLinkSelector.astro";
+import ProjectCardModal from "./ProjectCardModal.astro";
+
 interface Props {
     title: string;
     summary: string;
@@ -61,9 +64,13 @@ const getLabelStyle = (tech: string) => {
         color: fontColor,
     };
 };
+
+const getTitleClass = (title: string) => {
+    return title.toLowerCase().split(" ").join("-");
+};
 ---
 
-<div class="ui card">
+<div id=`${getTitleClass(title)}-card` class="ui card project-card">
     <div class="content">
         <div class="left floated image">
             {
@@ -81,17 +88,6 @@ const getLabelStyle = (tech: string) => {
         </div>
         <div class="meta">{promo}</div>
         <div class="description">{summary}</div>
-        {
-            url ? (
-                <a href={url}>
-                    <div class={`ui right floating icon label`}>
-                        <i
-                            class={`${url.includes("github") ? "github" : "external"} icon`}
-                        />
-                    </div>
-                </a>
-            ) : null
-        }
     </div>
     <div class={`extra content`}>
         <div class="ui labels">
@@ -104,9 +100,22 @@ const getLabelStyle = (tech: string) => {
             }
         </div>
     </div>
+    <div class="hide"><ProjectCardLinkSelector title={title} url={url} /></div>
 </div>
 
+<ProjectCardModal
+    title={title}
+    summary={summary}
+    url={url}
+    description={description}
+    promo={promo}
+/>
+
 <style>
+    .hide {
+        display: none;
+    }
+
     /* Fomantic overrides */
     .ui.card {
         background: var(--background-color) !important;
@@ -115,6 +124,18 @@ const getLabelStyle = (tech: string) => {
             0 0 0 1px var(--accent) !important;
 
         margin: 20px;
+    }
+
+    .ui.card:hover,
+    .ui.card:active {
+        box-shadow:
+            0 1px 3px 0 var(--blue-2-bright),
+            0 0 0 1px var(--blue-2-bright) !important;
+    }
+
+    .ui.card:hover > .hide,
+    .ui.card:active > .hide {
+        display: block;
     }
 
     .ui.card > .content > .header,

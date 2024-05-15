@@ -16,12 +16,14 @@
     --background-color: var(--white);
     --accent: var(--light-gray);
     --text-color: var(--gray);
+    --inverted-text-color: var(--white);
 }
 
 .theme-dark {
     --background-color: var(--gray);
     --accent: var(--blue-1);
     --text-color: var(--white);
+    --inverted-text-color: var(--gray);
 }
 
 body {

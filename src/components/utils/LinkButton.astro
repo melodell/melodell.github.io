@@ -22,7 +22,13 @@ const { icon, id, href, label, tooltip }: Props = Astro.props;
 </a>
 
 <style>
-    i.github.black {
+    i.black,
+    i.grey {
         color: var(--white) !important;
+    }
+
+    /* For ProjectCardLinkSelector */
+    .ui.button {
+        z-index: 1;
     }
 </style>

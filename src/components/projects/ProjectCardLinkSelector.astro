@@ -1,0 +1,64 @@
+---
+import LinkButton from "../utils/LinkButton.astro";
+
+interface Props {
+    title: string;
+    url?: string;
+}
+
+const { title, url }: Props = Astro.props;
+
+const getTitleClass = (title: string) => {
+    return title.toLowerCase().split(" ").join("-");
+};
+---
+
+<div class="link-selector">
+    <div class="link-selector-background"></div>
+    <LinkButton
+        id={`${getTitleClass(title)}-desc`}
+        icon="file alternate outline"
+        label="Description"
+    />
+    {
+        url && (
+            <>
+                {url.includes("github") ? (
+                    <LinkButton icon="github black" label="GitHub" href={url} />
+                ) : (
+                    <LinkButton
+                        icon="external grey"
+                        label="External"
+                        href={url}
+                    />
+                )}
+            </>
+        )
+    }
+</div>
+
+<style>
+    .link-selector {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-selector-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+
+        background: black;
+        opacity: 0.7;
+    }
+</style>
