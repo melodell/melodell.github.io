@@ -83,7 +83,7 @@ const getLabelStyle = (tech: string) => {
         <div class="description">{summary}</div>
         {
             url ? (
-                <a href={url}>
+                <a href={url} target="_blank">
                     <div class={`ui right floating icon label`}>
                         <i
                             class={`${url.includes("github") ? "github" : "external"} icon`}
