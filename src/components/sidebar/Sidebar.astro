@@ -82,20 +82,17 @@ const resumeLink = "/ResumeMelinaODell.pdf";
     const isSmallScreen = () => window.innerWidth < sidebarScreenSizeThreshold;
     const sidebar = $("#sidebar");
     const sidebarToggle = document.getElementById("sidebar-toggle");
-    const sidebarToggleHitbox = document.getElementById(
-        "sidebar-toggle-hitbox"
-    );
     const pusher = document.querySelector(".pusher");
 
     const showSidebar = () => {
         sidebar.sidebar("show");
-        sidebarToggle.classList.add(...["flipped", "sidebar-open"]);
+        sidebarToggle.classList.add("sidebar-open");
         sidebarToggle.classList.remove("sidebar-closed");
     };
 
     const hideSidebar = () => {
         sidebar.sidebar("hide");
-        sidebarToggle.classList.remove(...["flipped", "sidebar-open"]);
+        sidebarToggle.classList.remove("sidebar-open");
         sidebarToggle.classList.add("sidebar-closed");
     };
 
@@ -110,7 +107,7 @@ const resumeLink = "/ResumeMelinaODell.pdf";
         });
 
         // Show/hide sidebar on toggle arrow click
-        sidebarToggleHitbox.addEventListener("click", () => {
+        sidebarToggle.addEventListener("click", () => {
             sidebar.sidebar("is hidden") ? showSidebar() : hideSidebar();
         });
 
