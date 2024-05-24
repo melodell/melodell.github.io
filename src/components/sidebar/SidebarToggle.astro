@@ -1,30 +1,72 @@
 <div id="sidebar-toggle" class="caret sidebar-closed">
-    <div id="sidebar-toggle">
-        <div class="ui compact icon button">
-            <i class="bars icon"></i>
-        </div>
-    </div>
+    <div id="sidebar-toggle-hitbox"></div>
 </div>
 
 <style>
     :root {
-        --sidebar-padding: 2vw; /* Arbitrary sidebar button padding */
+        --caret-height: 12px;
+        --caret-width: 7px;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-3px);
+        }
+        100% {
+            transform: translateX(0);
+        }
     }
 
     #sidebar-toggle {
         position: fixed;
-        top: var(--sidebar-padding);
+        height: 100%;
+        top: 10px;
+        cursor: pointer;
         z-index: 2;
+
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    #sidebar-toggle-hitbox {
+        position: fixed;
+        height: calc(3 * var(--caret-height));
+        width: calc(3 * var(--caret-width));
+        top: -5px;
+        left: -5px;
+        z-index: 1;
     }
 
     .sidebar-closed {
-        left: var(--sidebar-padding);
-        transition: left ease 0.48s;
+        left: 15px;
+        transition: left ease 0.5s;
     }
 
     .sidebar-open {
-        /* Arbitrary extra sidebar width */
-        left: calc(var(--sidebar-padding) + 150px);
+        left: 165px;
         transition: left ease 0.48s;
+    }
+
+    .caret {
+        position: relative;
+    }
+
+    .caret:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        border-left: var(--caret-width) solid var(--text-color);
+        border-top: var(--caret-width) solid transparent;
+        border-bottom: var(--caret-width) solid transparent;
+    }
+
+    .caret.flipped:after {
+        border-left: 0;
+        border-right: var(--caret-width) solid var(--text-color);
     }
 </style>
