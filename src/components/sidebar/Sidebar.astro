@@ -121,6 +121,16 @@ const resumeLink = "/ResumeMelinaODell.pdf";
             }
         });
 
+        // Show/hide sidebar when screen size changes
+        window.addEventListener("resize", () => {
+            console.log("resize");
+            if (isSmallScreen()) {
+                hideSidebar();
+            } else {
+                showSidebar();
+            }
+        });
+
         // Detect swipe events to show/hide sidebar
         document.addEventListener("swiped-left", () => hideSidebar());
         document.addEventListener("swiped-right", () => showSidebar());
