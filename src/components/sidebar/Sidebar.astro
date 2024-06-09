@@ -48,10 +48,8 @@ const resumeLink = "/ResumeMelinaODell.pdf";
     </div>
 </div>
 
-<script is:inline>
-    {
-        /* Set active anchor link on click */
-    }
+<script is:inline define:vars={{ sections }}>
+    // Set active anchor link on click
 
     const navlinks = document.querySelectorAll(".anchor");
     const activeAnchor = window.location.hash;
@@ -62,12 +60,27 @@ const resumeLink = "/ResumeMelinaODell.pdf";
             ? linkEl.classList.add("active")
             : linkEl.classList.remove("active");
 
-        // Change focus on click
         linkEl.addEventListener("click", (e) => {
+            // Change focus on click
             const navlinks = document.querySelectorAll(".anchor");
             navlinks.forEach((link) => link.classList.remove("active"));
             e.target.classList.add("active");
             window.location.hash = e.target.getAttribute("data-href");
+
+            // Change section, if necessary;
+            sections.sections.forEach((section) => {
+                // If there is an active anchor
+                if (section.href === window.location.hash) {
+                    // If the active anchor has a category and isn't the selected category
+                    if (
+                        section.category &&
+                        localStorage.getItem("sectionSelection") !==
+                            section.category
+                    ) {
+                        document.getElementById(section.category).click(); // Click the category to switch
+                    }
+                }
+            });
         });
     });
 </script>

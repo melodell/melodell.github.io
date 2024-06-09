@@ -2,11 +2,13 @@
    "sections": [
       {
          "name": "Projects",
-         "href": "#projects"
+         "href": "#projects",
+         "category": "engineering"
       },
       {
          "name": "Papers",
-         "href": "#papers"
+         "href": "#papers",
+         "category": "academic"
       },
       {
          "name": "Contact",
