@@ -1,0 +1,74 @@
+---
+interface Props {
+    sectionTitles: { name: string; id: string }[];
+}
+
+const { sectionTitles }: Props = Astro.props;
+---
+
+<div class="ui secondary pointing equal width menu">
+    {
+        sectionTitles.map((title) => {
+            return (
+                <a id={title.id} class="section-selector-item item">
+                    {title.name}
+                </a>
+            );
+        })
+    }
+</div>
+
+<script is:inline define:vars={{ sectionTitles }}>
+    // Get section selection
+    // If no section has been previously selected, default to the first section
+    const sectionSelection = (() => {
+        if (
+            typeof localStorage !== "undefined" &&
+            localStorage.getItem("sectionSelection")
+        ) {
+            return localStorage.getItem("sectionSelection");
+        }
+        // Default to the first section
+        return sectionTitles[0].id;
+    })();
+
+    // Set the section selection and display the corresponding section
+    const setSectionSelection = (sectionSelectionId, init = false) => {
+        document.getElementById(sectionSelectionId).classList.add("active");
+        window.localStorage.setItem("sectionSelection", sectionSelectionId);
+        // Only try to set the display if the section already exists (i.e. after initial render)
+        if (!init) {
+            document.getElementById(
+                `${sectionSelectionId}-section`
+            ).style.display = "block";
+        }
+    };
+
+    // Initialize the section selection
+    setSectionSelection(sectionSelection, (init = true));
+
+    const menuItems = document.querySelectorAll(".section-selector-item");
+    menuItems.forEach((item) => {
+        // Add click event listener to each menu item that sets the section
+        // selection, displays the corresponding section, and hides the others
+        item.addEventListener("click", () => {
+            menuItems.forEach((otherItem) => {
+                otherItem.classList.remove("active");
+                document.getElementById(
+                    `${otherItem.id}-section`
+                ).style.display = "none";
+            });
+            setSectionSelection(item.id);
+        });
+    });
+</script>
+
+<style>
+    .ui.menu {
+        background: var(--background-color) !important;
+    }
+
+    .item {
+        color: var(--text-color) !important;
+    }
+</style>
