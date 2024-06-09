@@ -8,7 +8,9 @@ interface Props {
 const { id, title, classNames }: Props = Astro.props;
 ---
 
-<h2 id={id}>{title}</h2>
-<div class:list={["ui", classNames, "container"]}>
-    <slot />
+<div>
+    <h2 id={id}>{title}</h2>
+    <div class:list={["ui", classNames, "container"]}>
+        <slot />
+    </div>
 </div>
