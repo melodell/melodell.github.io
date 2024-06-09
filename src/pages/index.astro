@@ -3,9 +3,21 @@ import Contact from "../components/sections/Contact.astro";
 import Intro from "../components/sections/Intro.astro";
 import Papers from "../components/sections/Papers.astro";
 import Projects from "../components/sections/Projects.astro";
+import SectionSelector from "../components/sections/SectionSelector.astro";
 import Sidebar from "../components/sidebar/Sidebar.astro";
 import SidebarToggle from "../components/sidebar/SidebarToggle.astro";
 import PageWrapper from "../layouts/PageWrapper.astro";
+
+const sectionTitles = [
+    {
+        name: "Engineering",
+        id: "engineering",
+    },
+    {
+        name: "Academic",
+        id: "academic",
+    },
+];
 ---
 
 <PageWrapper
@@ -23,22 +35,47 @@ import PageWrapper from "../layouts/PageWrapper.astro";
         <Intro />
         <div class="ui divider"></div>
 
-        <!-- Experience -->
-        <!-- <Experience id="experience" />
-        <div class="ui divider"></div> -->
+        <SectionSelector sectionTitles={sectionTitles} />
 
-        <!-- Projects -->
-        <Projects id="projects" />
-        <div class="ui divider"></div>
+        <div id="engineering-section">
+            <!-- Experience -->
+            <!-- <Experience id="experience" />
+                <div class="ui divider"></div> -->
+            <!-- Projects -->
+            <Projects id="projects" />
+            <div class="ui divider"></div>
+        </div>
 
-        <!-- Papers -->
-        <Papers id="papers" />
-        <div class="ui divider"></div>
+        <div id="academic-section">
+            <!-- Papers -->
+            <Papers id="papers" />
+            <div class="ui divider"></div>
+        </div>
 
         <!-- Contact -->
         <Contact id="contact" />
     </main>
 </PageWrapper>
+
+<script is:inline define:vars={{ sectionTitles }}>
+    // Initial section display
+    // We want to show only the selected section on init, but we have to wait
+    // for the DOM to render them before we can hide them
+    //
+    // See primary logic for section selection in SectionSelector.astro script
+    const sectionSelection = localStorage.getItem("sectionSelection");
+    sectionTitles.forEach((sectionTitle) => {
+        if (sectionTitle.id === sectionSelection) {
+            document.getElementById(
+                `${sectionTitle.id}-section`
+            ).style.display = "block";
+        } else {
+            document.getElementById(
+                `${sectionTitle.id}-section`
+            ).style.display = "none";
+        }
+    });
+</script>
 
 <style>
     /* Fomantic overrides */
