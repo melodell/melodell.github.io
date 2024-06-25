@@ -1,0 +1,33 @@
+{
+    "talks": [
+        {
+            "title": "A Custom Generative AI Chatbot as a Course Resource",
+            "subtitle": "ASEE Paper Presentation",
+            "speakers": [
+                "Melina O'Dell",
+                "Maya Baveja",
+                "Akanksha Girdhar"
+            ],
+            "location": "Portland, OR",
+            "date": "June 2024"
+        },
+        {
+            "title": "Parallel and Concurrent Programming",
+            "subtitle": "EECS 390 Guest Lecture",
+            "speakers": [
+                "Melina O'Dell"
+            ],
+            "location": "Ann Arbor, MI",
+            "date": "April 2024"
+        },
+        {
+            "title": "Server-side Dynamic Pages",
+            "subtitle": "EECS 485, Lecture 3",
+            "speakers": [
+                "Melina O'Dell"
+            ],
+            "location": "Ann Arbor, MI",
+            "date": "September 2023"
+        }
+    ]
+}

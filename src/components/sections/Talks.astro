@@ -1,0 +1,48 @@
+---
+import talks from "../../data/talks.json";
+import Section from "./Section.astro";
+
+interface Props {
+    id: string;
+}
+
+const { id }: Props = Astro.props;
+
+const getSpeakers = (arr: string[]) => {
+    let l = arr.length;
+    if (l < 2) return arr[0];
+    if (l < 3) return arr.join(` and `);
+    arr = arr.slice();
+    arr[l - 1] = `and ${arr[l - 1]}`;
+    return arr.join(", ");
+};
+---
+
+<Section id={id} title="Talks and Lectures" classNames={["left aligned text"]}>
+    <div class="ui list">
+        {
+            talks["talks"].map((talk) => (
+                <div class="item talk-entry">
+                    <div class="header">
+                        {talk.title} (<em>{talk.subtitle}</em>)
+                    </div>
+                    <div class="description">
+                        {getSpeakers(talk.speakers)}. {talk.location},{" "}
+                        {talk.date}.
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</Section>
+
+<style>
+    .header,
+    .description {
+        color: var(--text-color) !important;
+    }
+
+    .talk-entry {
+        margin-bottom: 1em;
+    }
+</style>

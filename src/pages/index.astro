@@ -4,6 +4,7 @@ import Intro from "../components/sections/Intro.astro";
 import Papers from "../components/sections/Papers.astro";
 import Projects from "../components/sections/Projects.astro";
 import SectionSelector from "../components/sections/SectionSelector.astro";
+import Talks from "../components/sections/Talks.astro";
 import Sidebar from "../components/sidebar/Sidebar.astro";
 import SidebarToggle from "../components/sidebar/SidebarToggle.astro";
 import PageWrapper from "../layouts/PageWrapper.astro";
@@ -49,6 +50,9 @@ const sectionTitles = [
         <div id="academic-section">
             <!-- Papers -->
             <Papers id="papers" />
+            <div class="ui divider"></div>
+            <!-- Talks and Lectures -->
+            <Talks id="talks-and-lectures" />
             <div class="ui divider"></div>
         </div>
 
