@@ -1,0 +1,26 @@
+---
+import PictureGrid from "../components/sections/PictureGrid.astro";
+import PageWrapper from "../layouts/PageWrapper.astro";
+---
+
+<PageWrapper
+    title="Melina O'Dell"
+    description="Melina O'Dell"
+    keywords={["melodell, Melina O'Dell"]}
+    author="Melina O'Dell"
+    useFomantic={true}
+>
+    <main class="ui center aligned container">
+        <h1>Pictures</h1>
+        <p>I take a lot of pictures. Here are some of them.</p>
+        <PictureGrid />
+    </main>
+</PageWrapper>
+
+<style>
+    /* Fomantic overrides */
+    .ui.container {
+        max-width: 933px;
+        margin-top: 25px;
+    }
+</style>
