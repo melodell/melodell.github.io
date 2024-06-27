@@ -9,7 +9,8 @@
                 "Akanksha Girdhar"
             ],
             "location": "Portland, OR",
-            "date": "June 2024"
+            "date": "June 2024",
+            "pdfLink": "/slides/ASEE-2024.pdf"
         },
         {
             "title": "Parallel and Concurrent Programming",

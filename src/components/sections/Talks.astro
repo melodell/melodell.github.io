@@ -24,7 +24,14 @@ const getSpeakers = (arr: string[]) => {
             talks["talks"].map((talk) => (
                 <div class="item talk-entry">
                     <div class="header">
-                        {talk.title} (<em>{talk.subtitle}</em>)
+                        {talk["pdfLink"] ? (
+                            <a href={talk["pdfLink"]} target="_blank">
+                                {talk["title"]}
+                            </a>
+                        ) : (
+                            talk["title"]
+                        )}
+                        <em style="opacity: 0.6;">({talk.subtitle})</em>
                     </div>
                     <div class="description">
                         {getSpeakers(talk.speakers)}. {talk.location},{" "}
