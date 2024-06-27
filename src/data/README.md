@@ -111,3 +111,26 @@ Contains data on social media/contact info to be displayed in `Contact.astro` at
     "github": "<https://github.com/melodell>"
 }
 ```
+
+## talks.json
+
+Contains ordered data on talks/lectures to be displayed in `Talks.astro`.
+Each contains a title, subtitle, an ordered list of speakers, location, a date, and a link to the PDF stored in `public/slides/`.
+
+```json
+{
+    "publications": [
+        {
+            "title": "FIXME",
+            "subtitle": "FIXME",
+            "speakers": [
+                ...
+            ],
+            "location": "FIXME",
+            "date": "FIXME month and year",
+            "pdfLink": "FIXME link, relative to public/ (/slides/...)"
+        },
+        ...
+    ]
+}
+```
