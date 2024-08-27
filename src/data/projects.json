@@ -1,4 +1,4 @@
-{ 
+{
     "projects": [
         {
             "title": "Twitter Countdown Bot",
@@ -34,7 +34,7 @@
             "summary": "My dotfiles! Continuously updated and filled with bash customizations, aliases, my Emacs configuration, and more.",
             "tech": [
                 "Bash",
-                "ELisp", 
+                "ELisp",
                 "Unix"
             ],
             "description": "FIXME LONGER DESCRIPTION  Find my bash customizations in .bash_profile, my Emacs config in .emacs.d/init.el, and the things I've learned in .always_forget. Credit to Andrew DeOrio for sharing his terminal enthusiasm with me!",
@@ -54,6 +54,32 @@
             "url": "https://github.com/melodell/schedule-to-ical",
             "emoji": "calendar",
             "promo": "Saving myself 20 mins/semester"
+        },
+        {
+            "title": "Doors on Floorplans",
+            "summary": "Supporting Access Control devices (doors) on the Floorplans UI in the Verkada Command platform. Users can move, scale, and rotate door representations to match their physical space.",
+            "tech": [
+                "React",
+                "Redux",
+                "TypeScript"
+            ],
+            "description": "FIXME LONGER DESCRIPTION",
+            "url": "https://help.verkada.com/en/articles/8251110-add-and-view-doors-on-floor-plans",
+            "emoji": "door",
+            "promo": "My Verkada intern project"
+        },
+        {
+            "title": "App Init Refactor",
+            "summary": "Refactoring the app initialization for the Verkada Command platform to improve initial load times by 90%, and updates to page speed metrics to track improvements over time.",
+            "tech": [
+                "React",
+                "Redux",
+                "TypeScript",
+                "Datadog"
+            ],
+            "description": "FIXME LONGER DESCRIPTION",
+            "emoji": "stopwatch",
+            "promo": "My 2nd Verkada intern project"
         },
         {
             "title": "Search Engine Dataset Enhancements",
@@ -81,19 +107,6 @@
             "description": "FIXME LONGER DESCRIPTION",
             "emoji": "woman_teacher",
             "promo": "My LAZ intern project"
-        },
-        {
-            "title": "Doors on Floorplans",
-            "summary": "Supporting Access Control devices (doors) on the Floorplans UI in the Verkada Command platform. Users can move, scale, and rotate door representations to match their physical space.",
-            "tech": [
-                "React",
-                "Redux",
-                "TypeScript"
-            ],
-            "description":"FIXME LONGER DESCRIPTION",
-            "url": "https://help.verkada.com/en/articles/8251110-add-and-view-doors-on-floor-plans",
-            "emoji": "door",
-            "promo": "My Verkada intern project"
         }
-    ]   
+    ]
 }
