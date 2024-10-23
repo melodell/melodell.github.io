@@ -1,6 +1,15 @@
 {
     "talks": [
         {
+            "title": "Networking",
+            "subtitle": "EECS 485, Lecture 14",
+            "speakers": [
+                "Melina O'Dell"
+            ],
+            "location": "Ann Arbor, MI",
+            "date": "October 2024"
+        },
+        {
             "title": "A Custom Generative AI Chatbot as a Course Resource",
             "subtitle": "ASEE Paper Presentation",
             "speakers": [
