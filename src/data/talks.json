@@ -1,6 +1,15 @@
 {
     "talks": [
         {
+            "title": "Recommender Systems",
+            "subtitle": "EECS 485, Lecture 21",
+            "speakers": [
+                "Melina O'Dell"
+            ],
+            "location": "Ann Arbor, MI",
+            "date": "November 2024"
+        },
+        {
             "title": "Networking",
             "subtitle": "EECS 485, Lecture 14",
             "speakers": [
