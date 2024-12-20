@@ -16,6 +16,16 @@
     ],
     "coursePapers": [
         {
+            "title": "Strategic Data Ablation for Fine-Tuning LLMs for Logical Question Answering",
+            "authors": [
+                "Jeff Brill",
+                "Melina O'Dell",
+                "Max Liu"
+            ],
+            "date": "December 2024",
+            "pdfLink": "/papers/EECS_585_Final_Project_Report.pdf"
+        },
+        {
             "title": "Can AI models generate free response questions for AI courses?",
             "authors": [
                 "Yutong Ai",
