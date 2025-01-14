@@ -19,6 +19,7 @@ Made with [Astro](https://astro.build/).
 ### Learning Goals
 
 - Making an "interactive" site using vanilla JS
+- Learning about a static site framework (Astro)
 - More familiarity with Semantic/Fomantic UI
 
 ## Setup
