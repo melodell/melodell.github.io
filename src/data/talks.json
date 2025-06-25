@@ -1,6 +1,16 @@
 {
     "talks": [
         {
+            "title": "Specialist vs. Generalist Generative AI for Student Learning",
+            "subtitle": "ASEE Paper Presentation",
+            "speakers": [
+                "Melina O'Dell"
+            ],
+            "location": "Montreal, QC, CA",
+            "date": "June 2025",
+            "pdfLink": "/slides/ASEE25-slides.pdf"
+        },
+        {
             "title": "Recommender Systems",
             "subtitle": "EECS 485, Lecture 21",
             "speakers": [
