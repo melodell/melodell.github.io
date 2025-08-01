@@ -1,0 +1,20 @@
+---
+import ImageGridItem from "../utils/PictureGridItem.astro";
+
+const images = await Astro.glob("/src/images/sunset/*").then((files) => {
+    return files
+        .map((file) => file.default)
+        .sort((a, b) =>
+            Number(a.src.split("/").pop().split(".")[0]) >
+            Number(b.src.split("/").pop().split(".")[0])
+                ? 1
+                : -1
+        );
+});
+
+console.log(images);
+---
+
+<div class="ui stackable two column grid">
+    {images.map((image) => <ImageGridItem image={image} />)}
+</div>
