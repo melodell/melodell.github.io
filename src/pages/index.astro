@@ -11,12 +11,12 @@ import PageWrapper from "../layouts/PageWrapper.astro";
 
 const sectionTitles = [
     {
-        name: "Engineering",
-        id: "engineering",
-    },
-    {
         name: "Academic",
         id: "academic",
+    },
+    {
+        name: "Engineering",
+        id: "engineering",
     },
 ];
 ---
@@ -38,21 +38,21 @@ const sectionTitles = [
 
         <SectionSelector sectionTitles={sectionTitles} />
 
-        <div id="engineering-section">
-            <!-- Experience -->
-            <!-- <Experience id="experience" />
-                <div class="ui divider"></div> -->
-            <!-- Projects -->
-            <Projects id="projects" />
-            <div class="ui divider"></div>
-        </div>
-
         <div id="academic-section">
             <!-- Papers -->
             <Papers id="papers" />
             <div class="ui divider"></div>
             <!-- Talks and Lectures -->
             <Talks id="talks-and-lectures" />
+            <div class="ui divider"></div>
+        </div>
+
+        <div id="engineering-section">
+            <!-- Experience -->
+            <!-- <Experience id="experience" />
+                <div class="ui divider"></div> -->
+            <!-- Projects -->
+            <Projects id="projects" />
             <div class="ui divider"></div>
         </div>
 

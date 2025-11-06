@@ -7,7 +7,7 @@ Made with [Astro](https://astro.build/).
 ### Why?
 
 - Organized space to display/update achievements
-- Adds a link to my resume :)
+- Play around with a static pages framework
 
 ### How?
 
@@ -21,6 +21,7 @@ Made with [Astro](https://astro.build/).
 - Making an "interactive" site using vanilla JS
 - Learning about a static site framework (Astro)
 - More familiarity with Semantic/Fomantic UI
+- Building a static site because it doesn't need to be more than that - Always use the simplest tool for the job
 
 ## Setup
 

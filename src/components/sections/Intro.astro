@@ -21,7 +21,7 @@ const resumeLink = "/ResumeMelinaODell.pdf";
                     icon="envelope"
                     id="email-button"
                     label="Email"
-                    tooltip="Copy melodell@umich.edu to clipboard"
+                    tooltip="Copy melinaodell48@gmail.com to clipboard"
                 />
                 <LinkButton
                     icon="linkedin"
@@ -49,7 +49,7 @@ const resumeLink = "/ResumeMelinaODell.pdf";
 <script is:inline define:vars={{ socials }}>
     // @ts-nocheck
     // Copy email to clipboard on click
-    const email = socials["email"]["umich"];
+    const email = socials["email"]["personal"];
     const emailButton = document.getElementById("email-button");
     const copyText = (text) => {
         navigator.clipboard.writeText(text);
