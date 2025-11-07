@@ -1,11 +1,6 @@
 {
    "sections": [
       {
-         "name": "Projects",
-         "href": "#projects",
-         "category": "engineering"
-      },
-      {
          "name": "Papers",
          "href": "#papers",
          "category": "academic"
@@ -14,6 +9,11 @@
          "name": "Talks and Lectures",
          "href": "#talks-and-lectures",
          "category": "academic"
+      },
+      {
+         "name": "Projects",
+         "href": "#projects",
+         "category": "engineering"
       },
       {
          "name": "Contact",
