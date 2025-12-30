@@ -30,6 +30,11 @@
         animation-name: bounce;
         animation-duration: 2s;
         animation-iteration-count: infinite;
+
+        /* Hide toggle on large screens */
+        @media (min-width: 1160px) {
+            display: none;
+        }
     }
 
     #sidebar-toggle-hitbox {
