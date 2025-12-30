@@ -8,7 +8,6 @@
                 "Twitter API",
                 "Heroku"
             ],
-            "description": "FIXME LONGER DESCRIPTION",
             "url": "https://github.com/melodell/movie-countdown",
             "emoji": "robot",
             "promo": "Retweeted by the official movie account!"
@@ -24,7 +23,6 @@
                 "CSS",
                 "GH Pages"
             ],
-            "description": "FIXME LONGER DESCRIPTION",
             "url": "https://github.com/melodell/melodell.github.io",
             "emoji": "computer",
             "promo": "You are here!"
@@ -37,7 +35,6 @@
                 "ELisp",
                 "Unix"
             ],
-            "description": "FIXME LONGER DESCRIPTION  Find my bash customizations in .bash_profile, my Emacs config in .emacs.d/init.el, and the things I've learned in .always_forget. Credit to Andrew DeOrio for sharing his terminal enthusiasm with me!",
             "url": "https://github.com/melodell/dotfiles",
             "icon": "terminal",
             "promo": "\"git status\"? You mean \"gs\"?"
@@ -50,10 +47,22 @@
                 "BeautifulSoup",
                 "iCal"
             ],
-            "description": "FIXME LONGER DESCRIPTION",
             "url": "https://github.com/melodell/schedule-to-ical",
             "emoji": "calendar",
             "promo": "Saving myself 20 mins/semester"
+        },
+        {
+            "title": "License Manager Redesign",
+            "summary": "A redesign of the License Manager UI to improve usability and performance that enabled $100M in bookings and $100M in pipeline across 250+ enterprise customers.",
+            "tech": [
+                "React",
+                "Redux",
+                "Tanstack Query",
+                "TypeScript",
+                "Figma"
+            ],
+            "emoji": "money_with_wings",
+            "promo": "My first Verkada full-time project and chosen as project lead"
         },
         {
             "title": "Doors on Floorplans",
@@ -63,7 +72,6 @@
                 "Redux",
                 "TypeScript"
             ],
-            "description": "FIXME LONGER DESCRIPTION",
             "url": "https://help.verkada.com/en/articles/8251110-add-and-view-doors-on-floor-plans",
             "emoji": "door",
             "promo": "My Verkada intern project"
@@ -77,7 +85,6 @@
                 "TypeScript",
                 "Datadog"
             ],
-            "description": "FIXME LONGER DESCRIPTION",
             "emoji": "stopwatch",
             "promo": "My 2nd Verkada intern project"
         },
@@ -90,9 +97,22 @@
                 "Pytest",
                 "MapReduce"
             ],
-            "description": "FIXME LONGER DESCRIPTION  (301 files, 1.6 million lines)",
             "emoji": "mag",
             "promo": "\"Biggest PRs eva\" (3 mil+ lines)"
+        },
+        {
+            "title": "Instagram Clone",
+            "summary": "A full-stack Instagram clone. Features login and user authentication, uploading images, liking, commenting, and following users.",
+            "tech": [
+                "React",
+                "Flask",
+                "JavaScript",
+                "Python",
+                "HTML",
+                "CSS"
+            ],
+            "emoji": "camera",
+            "promo": "#chickensofinstagram"
         },
         {
             "title": "Instructor Dashboard",
@@ -104,7 +124,6 @@
                 "PHP",
                 "MySQL"
             ],
-            "description": "FIXME LONGER DESCRIPTION",
             "emoji": "woman_teacher",
             "promo": "My LAZ intern project"
         }

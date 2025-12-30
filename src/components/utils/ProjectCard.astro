@@ -4,14 +4,12 @@ interface Props {
     summary: string;
     tech: string[];
     url?: string;
-    description: string;
     icon?: string;
     emoji?: string;
     promo: string;
 }
 
-const { title, summary, tech, url, description, icon, emoji, promo }: Props =
-    Astro.props;
+const { title, summary, tech, url, icon, emoji, promo }: Props = Astro.props;
 
 // Tech categories to determine label color
 const languages = new Set([
@@ -24,7 +22,15 @@ const languages = new Set([
     "ELisp",
     "PHP",
 ]);
-const libraries = new Set(["React", "Angular", "Astro", "Laravel", "Redux"]);
+const libraries = new Set([
+    "React",
+    "Angular",
+    "Astro",
+    "Laravel",
+    "Redux",
+    "Flask",
+    "Tanstack Query",
+]);
 const deploy = new Set(["Heroku", "GH Pages", "AWS EC2", "Docker"]);
 const database = new Set(["MySQL", "SQLite"]);
 const misc = new Set([
@@ -35,6 +41,7 @@ const misc = new Set([
     "iCal",
     "Unix",
     "Datadog",
+    "Figma",
 ]);
 
 const getLabelStyle = (tech: string) => {
