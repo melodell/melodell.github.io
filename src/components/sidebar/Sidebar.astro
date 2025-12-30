@@ -151,9 +151,8 @@ import { resumeLink, cvLink } from "../constants.js";
         document.addEventListener("swiped-left", () => hideSidebar());
         document.addEventListener("swiped-right", () => showSidebar());
     } else {
-        // Always show sidebar on large screens and hide toggle arrow
+        // Always show sidebar on large screens
         sidebar.addClass("visible");
-        sidebarToggle.hidden = true;
     }
 </script>
 
