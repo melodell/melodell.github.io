@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import data from "../../data/pictures.json";
+
+interface ImageData {
+    [key: string]: {
+        location: string;
+    };
+}
+const imageData: ImageData = data;
+
+interface Props {
+    image: any;
+}
+
+const { image }: Props = Astro.props;
+const name = image.src.split("/").pop().split(".")[0];
+---
+
+<div class="column">
+    <div class="picture-grid-item">
+        <Image src={image} width={400} alt="" />
+        <em>{imageData[name].location}</em>
+    </div>
+</div>
+
+<style>
+    .picture-grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+</style>
