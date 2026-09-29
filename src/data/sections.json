@@ -11,6 +11,11 @@
          "category": "academic"
       },
       {
+         "name": "Teaching",
+         "href": "#teaching",
+         "category": "academic"
+      },
+      {
          "name": "Projects",
          "href": "#projects",
          "category": "engineering"

@@ -112,6 +112,34 @@ Contains data on social media/contact info to be displayed in `Contact.astro` at
 }
 ```
 
+## teaching.json
+
+Contains ordered data on teaching experience to be displayed in `Teaching.astro`.
+Teaching entries are grouped by institution. Each course contains a course name,
+course number, optional course link, and an ordered list of semesters.
+
+```json
+{
+    "institutions": [
+        {
+            "institutionName": "FIXME",
+            "courses": [
+                {
+                    "courseName": "FIXME",
+                    "courseNumber": "FIXME",
+                    "courseLink": "FIXME optional URL",
+                    "semesters": [
+                        "FIXME term and year"
+                    ]
+                },
+                ...
+            ]
+        },
+        ...
+    ]
+}
+```
+
 ## talks.json
 
 Contains ordered data on talks/lectures to be displayed in `Talks.astro`.
