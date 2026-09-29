@@ -71,11 +71,11 @@ const sectionTitles = [
     sectionTitles.forEach((sectionTitle) => {
         if (sectionTitle.id === sectionSelection) {
             document.getElementById(
-                `${sectionTitle.id}-section`
+                `${sectionTitle.id}-section`,
             ).style.display = "block";
         } else {
             document.getElementById(
-                `${sectionTitle.id}-section`
+                `${sectionTitle.id}-section`,
             ).style.display = "none";
         }
     });
@@ -84,7 +84,7 @@ const sectionTitles = [
 <style>
     /* Fomantic overrides */
     .ui.container {
-        max-width: 950px;
+        max-width: var(--page-width);
         margin-top: 25px;
     }
 
