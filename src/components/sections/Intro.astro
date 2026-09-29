@@ -4,6 +4,7 @@ import socials from "../../data/socials.json";
 import LinkButton from "../utils/LinkButton.astro";
 import UserImage from "../utils/UserImage.astro";
 import { resumeLink, cvLink } from "../constants.js";
+import { marked } from "marked";
 ---
 
 <div class="ui two column stackable grid container">
@@ -12,7 +13,7 @@ import { resumeLink, cvLink } from "../constants.js";
     </div>
     <div class="left aligned column">
         <h1>Melina O'Dell</h1>
-        {bios["bios"].map((bio) => <p>{bio}</p>)}
+        {bios.bios.map((bio) => <p set:html={marked.parseInline(bio)} />)}
         <br />
         <div class="ui center aligned container">
             <div class="ui small stackable wrapping buttons">
