@@ -2,7 +2,9 @@
 
 Melina O'Dell's Personal Website
 
-Made with [Astro](https://astro.build/).
+Hosted at [melinaodell.com](https://melinaodell.com)
+
+Made with [Astro](https://astro.build/)
 
 ### Why?
 
