@@ -9,7 +9,7 @@ interface Props {
 const { id }: Props = Astro.props;
 
 const publications = papers["publications"];
-const coursePapers = papers["coursePapers"];
+// const coursePapers = papers["coursePapers"];
 
 const getAuthors = (arr: string[]) => {
     let l = arr.length;
@@ -39,21 +39,6 @@ const getAuthors = (arr: string[]) => {
                     <div class="description">
                         {getAuthors(paper["authors"])}. {paper["conference"]},{" "}
                         {paper["date"]}.
-                    </div>
-                </div>
-            ))
-        }
-        <h3>Coursework</h3>
-        {
-            coursePapers.map((paper) => (
-                <div class="item paper-entry">
-                    <div class="header">
-                        <a href={paper["pdfLink"]} target="_blank">
-                            {paper["title"]}
-                        </a>
-                    </div>
-                    <div class="description">
-                        {getAuthors(paper["authors"])}. {paper["date"]}.
                     </div>
                 </div>
             ))

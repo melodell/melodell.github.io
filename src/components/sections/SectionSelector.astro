@@ -39,7 +39,7 @@ const { sectionTitles }: Props = Astro.props;
         // Only try to set the display if the section already exists (i.e. after initial render)
         if (!init) {
             document.getElementById(
-                `${sectionSelectionId}-section`
+                `${sectionSelectionId}-section`,
             ).style.display = "block";
         }
     };
@@ -55,7 +55,7 @@ const { sectionTitles }: Props = Astro.props;
             menuItems.forEach((otherItem) => {
                 otherItem.classList.remove("active");
                 document.getElementById(
-                    `${otherItem.id}-section`
+                    `${otherItem.id}-section`,
                 ).style.display = "none";
             });
             setSectionSelection(item.id);
@@ -70,5 +70,13 @@ const { sectionTitles }: Props = Astro.props;
 
     .item {
         color: var(--text-color) !important;
+    }
+
+    .item:not(.active) {
+        border-color: var(--accent) !important;
+    }
+
+    .item:hover:not(.active) {
+        border-color: var(--blue-2-bright) !important;
     }
 </style>
